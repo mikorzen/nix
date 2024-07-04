@@ -5,5 +5,5 @@
     extraConfig = {
       credential.helper = "oauth";
     };
-  }
+  };
 }
