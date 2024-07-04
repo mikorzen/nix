@@ -12,6 +12,7 @@
     zed-editor
 
     # dev
+    git-credential-oauth
     bun
 
     # fonts
