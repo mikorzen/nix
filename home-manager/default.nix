@@ -1,9 +1,10 @@
 {
   imports = [
+    ./modules/envars.nix
+    ./modules/packages.nix
     ./modules/ags.nix
     ./modules/fish.nix
     ./modules/hyprland.nix
-    ./modules/packages.nix
     ./modules/theme.nix
   ];
 
