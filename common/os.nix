@@ -1,14 +1,14 @@
 { pkgs, lib, ... }: {
   imports = [
-    ./modules/bootloader.nix
-    ./modules/envars.nix
-    ./modules/greetd.nix
-    ./modules/locale.nix
-    ./modules/mainUser.nix
-    ./modules/programs.nix
-    ./modules/packages.nix
-    ./modules/services.nix
-    ./modules/sound.nix
+    ./os/bootloader.nix
+    ./os/envars.nix
+    ./os/greetd.nix
+    ./os/locale.nix
+    ./os/mainUser.nix
+    ./os/programs.nix
+    ./os/packages.nix
+    ./os/services.nix
+    ./os/sound.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

@@ -1,5 +1,7 @@
 {
   imports = [
-    ../../home/default.nix
+    ../../common/home.nix
+
+    ./home/hypr.nix
   ];
 }

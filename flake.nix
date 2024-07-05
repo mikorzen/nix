@@ -24,13 +24,13 @@
       Acerussy = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system; };
         modules = [
-          ./hosts/Acerussy/configuration.nix
+          ./hosts/Acerussy.nix
         ];
       };
       Computerussy = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs system; };
         modules = [
-          ./hosts/Computerussy/configuration.nix
+          ./hosts/Computerussy.nix
         ];
       };
     };

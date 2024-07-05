@@ -9,15 +9,17 @@
     bind = [
       "$mainMod, T, exec, $terminal"
       "$mainMod, Y, exec, $terminal-bak"
+      "$mainMod, E, exec, $fileManager"
+      "$mainMod, B, exec, $browser"
+      "$mainMod, D, exec, wofi --show drun"
+
       "$mainMod, Q, killactive,"
       "$mainMod, M, exit,"
-      "$mainMod, E, exec, $fileManager"
       "$mainMod, F, togglefloating,"
-      "$mainMod, D, exec, wofi --show drun"
+      
       "$mainMod, P, pseudo, # dwindle"
       "$mainMod, J, togglesplit, # dwindle"
-      "$mainMod, B, exec, $browser"
-
+      
       # Move focus with mainMod + arrow keys
       "$mainMod, left,  movefocus, l"
       "$mainMod, right, movefocus, r"
@@ -60,37 +62,14 @@
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-      # # Scroll through existing workspaces with mainMod + scroll
-      # "$mainMod, mouse_down, workspace, e+1"
-      # "$mainMod, mouse_up, workspace, e-1"
+      # Scroll through existing workspaces with mainMod + scroll
+      "$mainMod, mouse_down, workspace, e+1"
+      "$mainMod, mouse_up, workspace, e-1"
 
-      # # Keyboard backlight
-      # "$mainMod, F3, exec, brightnessctl -d *::kbd_backlight set +33%"
-      # "$mainMod, F2, exec, brightnessctl -d *::kbd_backlight set 33%-"
-
-      # # Volume and Media Control
+      # Volume and Media Control
       # ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
       # ", XF86AudioLowerVolume, exec, pamixer -d 5 "
       # ", XF86AudioMute, exec, pamixer -t"
-      # ", XF86AudioMicMute, exec, pamixer --default-source -m"
-      
-      # # Brightness control
-      # ", XF86MonBrightnessDown, exec, brightnessctl set 5%- "
-      # ", XF86MonBrightnessUp, exec, brightnessctl set +5% "
-
-      # # Configuration files
-      # ''$mainMod SHIFT, N, exec, alacritty -e sh -c "rb"''
-      # ''$mainMod SHIFT, C, exec, alacritty -e sh -c "conf"''
-      # ''$mainMod SHIFT, H, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/hyprland.nix"''
-      # ''$mainMod SHIFT, W, exec, alacritty -e sh -c "nvim ~/nix/home-manager/modules/wms/waybar.nix''
-      # '', Print, exec, grim -g "$(slurp)" - | swappy -f -''
-
-      # # Waybar
-      # "$mainMod, B, exec, pkill -SIGUSR1 waybar"
-      # "$mainMod, W, exec, pkill -SIGUSR2 waybar"
-
-      # # Disable all effects
-      # "$mainMod Shift, G, exec, ~/.config/hypr/gamemode.sh"
     ];
 
     bindm = [
