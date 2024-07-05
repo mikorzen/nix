@@ -1,6 +1,10 @@
 {
   services = {
-    # xserver.enable = true;
+    xserver = {
+      enable = true;
+      # displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
+    };
     power-profiles-daemon.enable = true;
     printing.enable = true;
     fstrim.enable = true; # Weekly SSD TRIM (I think)

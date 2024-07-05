@@ -2,13 +2,14 @@
   wayland.windowManager.hyprland.settings = {
     "$mainMod" = "SUPER";
     "$terminal" = "warp-terminal";
+    "$fileManager" = "nautilus";
     "$browser" = "microsoft-edge";
 
     bind = [
       "$mainMod, T, exec, $terminal"
       "$mainMod, Q, killactive,"
       "$mainMod, M, exit,"
-      "$mainMod, E, exec, dolphin"
+      "$mainMod, E, exec, $fileManager"
       "$mainMod, F, togglefloating,"
       "$mainMod, D, exec, wofi --show drun"
       "$mainMod, P, pseudo, # dwindle"

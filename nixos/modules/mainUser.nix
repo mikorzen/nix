@@ -3,7 +3,7 @@ let
   cfg = config.mainUser;
 in {
   options.mainUser = with types; {
-    enable = mkEnableOption "Enable main user";
+    # enable = mkEnableOption "Enable main user";
     username = mkOption {
       type = str;
       description = "Username";
@@ -17,20 +17,18 @@ in {
       description = "Groups to add main user to";
       default = [ ];
     };
-    packages = mkOption {
-      type = listOf raw;
-      description = "Main user-specific packages";
-      default = [ ];
-    };
+    # packages = mkOption {
+    #   type = listOf raw;
+    #   description = "Main user-specific packages";
+    #   default = [ ];
+    # };
   };
 
-  config = mkIf cfg.enable {
-    users.users.${cfg.username} = {
-      isNormalUser = true;
-      description = cfg.description;
-      extraGroups = [ "wheel" ] ++ cfg.groups;
-      packages = with pkgs; [ ] ++ cfg.packages;
-      shell = pkgs.fish;
-    };
+  config.users.users.${cfg.username} = {
+    isNormalUser = true;
+    description = cfg.description;
+    extraGroups = [ "wheel" ] ++ cfg.groups;
+    # packages = with pkgs; [ ] ++ cfg.packages;
+    shell = pkgs.fish;
   };
 }

@@ -15,6 +15,9 @@
     git-credential-oauth
     bun
 
+    # stuff
+    discord
+
     # fonts
     montserrat
     (nerdfonts.override { fonts = [ "FiraCode" ]; })

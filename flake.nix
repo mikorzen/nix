@@ -16,10 +16,9 @@
   };
 
   outputs = inputs @ { nixpkgs, home-manager, ... }:
-    let
-      system = "x86_64-linux";
-    in {
-
+  let
+    system = "x86_64-linux";
+  in {
     # NixOS config (Acerussy | Computerussy – hosts)
     nixosConfigurations = {
       Acerussy = nixpkgs.lib.nixosSystem {

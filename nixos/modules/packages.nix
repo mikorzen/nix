@@ -3,8 +3,10 @@
 
   environment.systemPackages = with pkgs; [
     wget
-    greetd.tuigreet
-    warp-terminal
-    microsoft-edge
+    greetd.tuigreet    # session manager
+    (warp-terminal.override { waylandSupport = true; })  # terminal
+    blackbox-terminal  # terminal
+    microsoft-edge     # browser
+    gnome.dconf-editor
   ];
 }

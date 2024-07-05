@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }: {
   imports = [
     ./modules/bootloader.nix
     ./modules/locale.nix
@@ -13,11 +13,11 @@
 
   hardware.graphics.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  # xdg.portal.extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
 
   networking.networkmanager.enable = true;
 
   mainUser = {
-    enable = true;
     username = "mikorzen";
     description = "Michał Korzeń";
   };
