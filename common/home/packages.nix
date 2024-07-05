@@ -4,9 +4,6 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    # editors
-    zed-editor
-
     # stuff
     discord
 

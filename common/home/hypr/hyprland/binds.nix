@@ -3,7 +3,7 @@
     "$mainMod" = "SUPER";
     "$terminal" = "warp-terminal";
     "$terminal-bak" = "blackbox";
-    "$fileManager" = "nautilus";
+    "$fileManager" = "nautilus --new-window";
     "$browser" = "microsoft-edge";
 
     bind = [
@@ -14,7 +14,7 @@
       "$mainMod, D, exec, wofi --show drun"
 
       "$mainMod, Q, killactive,"
-      "$mainMod, M, exit,"
+      "$mainMod, K, exit,"
       "$mainMod, F, togglefloating,"
       
       "$mainMod, P, pseudo, # dwindle"
@@ -62,14 +62,21 @@
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
 
+      # Minimize (and restore) ONLY one (active) window with mainMod + M
+      "$mainMod, M, togglespecialworkspace, minimized"
+      "$mainMod, M, movetoworkspace, +0"
+      "$mainMod, M, togglespecialworkspace, minimized"
+      "$mainMod, M, movetoworkspace, special:minimized"
+      "$mainMod, M, togglespecialworkspace, minimized"
+
       # Scroll through existing workspaces with mainMod + scroll
-      "$mainMod, mouse_down, workspace, e+1"
-      "$mainMod, mouse_up, workspace, e-1"
+      "$mainMod, mouse_down, workspace, e-1"
+      "$mainMod, mouse_up, workspace, e+1"
 
       # Volume and Media Control
-      # ", XF86AudioRaiseVolume, exec, pamixer -i 5 "
-      # ", XF86AudioLowerVolume, exec, pamixer -d 5 "
-      # ", XF86AudioMute, exec, pamixer -t"
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     ];
 
     bindm = [

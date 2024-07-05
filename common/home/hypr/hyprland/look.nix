@@ -2,34 +2,30 @@
   wayland.windowManager.hyprland.settings = {
     general = { 
       gaps_in = 5;
-      gaps_out = 20;
+      gaps_out = 15;
 
-      border_size = 2;
-      "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
+      "col.active_border" = "rgba(ffff00ee) rgba(ff7900ee) 135deg";
       "col.inactive_border" = "rgba(595959aa)";
-      resize_on_border = false;
+      resize_on_border = true;
 
       allow_tearing = false;
-
       layout = "dwindle";
     };
 
     decoration = {
-      rounding = 10;
 
+      rounding = 12;
       active_opacity = 1.0;
       inactive_opacity = 1.0;
 
-      drop_shadow = true;
-      shadow_range = 4;
-      shadow_render_power = 3;
-      "col.shadow" = "rgba(1a1a1aee)";
+      shadow_range = 8;
+
+      dim_inactive = true;
+      dim_strength = 0.3;
 
       blur = {
         enabled = true;
-        size = 3;
-        passes = 1;
-        vibrancy = 0.1696;
+        size = 5;
       };
     };
 
@@ -47,8 +43,10 @@
     };
 
     misc = { 
-      force_default_wallpaper = -1;
-      disable_hyprland_logo = false;
+      force_default_wallpaper = 0;
+      disable_splash_rendering = true;
+      disable_hyprland_logo = true;
+      focus_on_activate = true;
     };
   };
 }
