@@ -1,9 +1,12 @@
 {
   imports = [
+    ./hyprland/animations.nix
     ./hyprland/binds.nix
+    ./hyprland/decoration.nix
+    ./hyprland/general.nix
     ./hyprland/input.nix
     ./hyprland/layout.nix
-    ./hyprland/look.nix
+    ./hyprland/misc.nix
     ./hyprland/screen.nix
   ];
 
