@@ -1,24 +1,24 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   imports = [
     ./modules/bootloader.nix
-    ./modules/locale.nix
-    ./modules/sound.nix
-    ./modules/services.nix
-    ./modules/greetd.nix
-    ./modules/programs.nix
-    ./modules/mainUser.nix
     ./modules/envars.nix
+    ./modules/greetd.nix
+    ./modules/locale.nix
+    ./modules/mainUser.nix
+    ./modules/programs.nix
     ./modules/packages.nix
+    ./modules/services.nix
+    ./modules/sound.nix
   ];
 
-  hardware.graphics.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  # xdg.portal.extraPortals = with pkgs; [ xdg-desktop-portal-gtk ];
 
+  hardware.graphics.enable = true;
   networking.networkmanager.enable = true;
 
   mainUser = {
     username = "mikorzen";
     description = "Michał Korzeń";
+    shell = pkgs.fish;
   };
 }

@@ -9,7 +9,7 @@
     };
   };
   
-  # Seamless configuration
+  # Stuff so that the boot log doesn't spill into tuigreet
   systemd.services.greetd.serviceConfig = {
     Type = "idle";
     StandardInput = "tty";

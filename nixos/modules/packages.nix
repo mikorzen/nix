@@ -2,11 +2,17 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    wget
-    greetd.tuigreet    # session manager
-    (warp-terminal.override { waylandSupport = true; })  # terminal
-    blackbox-terminal  # terminal
-    microsoft-edge     # browser
-    gnome.dconf-editor
+    # session manager
+    greetd.tuigreet
+
+    # terminal
+    (warp-terminal.override { waylandSupport = true; })  
+    blackbox-terminal
+
+    # file manager
+    gnome.nautilus 
+
+    # browser
+    microsoft-edge     
   ];
 }

@@ -1,9 +1,11 @@
 {
   imports = [ 
-    ./hardware-configuration.nix
     ./modules/bluetooth.nix
-    ./modules/power.nix
     ./modules/packages.nix
+    ./modules/power.nix
+
+    ./hardware-configuration.nix
+
     ../../nixos/default.nix
   ];
 

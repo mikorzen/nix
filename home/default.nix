@@ -1,12 +1,13 @@
 {
   imports = [
-    ./modules/packages.nix
-    ./modules/git.nix
-    ./modules/fish.nix
-    # ./modules/xdg.nix
-    ./modules/theme.nix
-    ./modules/hypr.nix
     ./modules/ags.nix
+    ./modules/fish.nix
+    ./modules/git.nix
+    ./modules/hypr.nix
+    ./modules/packages.nix
+    ./modules/programs.nix
+    ./modules/theme.nix
+    ./modules/xdg.nix
   ];
 
   home = {

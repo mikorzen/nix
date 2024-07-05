@@ -1,16 +1,15 @@
 {
   imports = [
-    ./hyprland/screen.nix
-    # ./hyprland/envars.nix
+    ./hyprland/binds.nix
     ./hyprland/input.nix
     ./hyprland/look.nix
-    ./hyprland/binds.nix
+    ./hyprland/screen.nix
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
-      exec-once = [ "ags" "hyprpaper" ];
+      exec-once = [ "hyprpaper" ];  # "ags"
       dwindle = {
         pseudotile = true;
         preserve_split = true;

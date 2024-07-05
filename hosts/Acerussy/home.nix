@@ -1,5 +1,5 @@
 {
   imports = [
-    ../../home-manager/default.nix
+    ../../home/default.nix
   ];
 }
