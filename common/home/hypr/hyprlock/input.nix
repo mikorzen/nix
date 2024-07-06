@@ -3,7 +3,7 @@
     monitor = "";
 
     outline_thickness = 2;
-    dots_spacing = 0.6; # Scale of dots' absolute size, 0.0 - 1.0
+    dots_spacing = 0.6;
     dots_center = true;
     fade_on_empty = false;
     outer_color = "rgba(0, 0, 0, 0)";

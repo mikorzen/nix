@@ -7,6 +7,7 @@
     ./hyprland/input.nix
     ./hyprland/layout.nix
     ./hyprland/misc.nix
+    ./hyprland/plugins.nix
     ./hyprland/screen.nix
   ];
 

@@ -1,10 +1,8 @@
 {
   services = {
-    # xserver.enable = true;
-    power-profiles-daemon.enable = true;
-    printing.enable = true;
+    printing.enable = true; # CUPS
     fstrim.enable = true; # Weekly SSD TRIM (I think)
-    # libinput.enable = true; # Touchpad support (present by default in most DMs)
-    gvfs.enable = true; # Filesystem support for GNOME Nautilus
+    gvfs.enable = true; # Filesystem support for Nautilus (Trash, etc.)
+    power-profiles-daemon.enable = true; # Power profiles
   };
 }

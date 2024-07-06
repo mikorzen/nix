@@ -2,7 +2,7 @@
   imports = [ 
     (modulesPath + "/installer/scan/not-detected.nix")
     ./hardware/boot.nix
-    ./hardware/filesystems.nix
+    ./hardware/fileSystems.nix
   ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

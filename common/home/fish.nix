@@ -13,6 +13,7 @@
       nhs = "nh home switch";
       wifi = "nmtui";
       bt = "blueman-manager";
+      sus = "systemctl suspend";
     };
   };
 }

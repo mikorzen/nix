@@ -14,9 +14,10 @@
       "$mainMod, D, exec, wofi --show drun"
 
       "$mainMod, Q, killactive,"
+      "$mainMod, L, exec, hyprlock"
       "$mainMod, K, exit,"
+
       "$mainMod, F, togglefloating,"
-      
       "$mainMod, P, pseudo, # dwindle"
       "$mainMod, J, togglesplit, # dwindle"
       
