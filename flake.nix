@@ -20,42 +20,10 @@
     };
   };
 
-  outputs = inputs @ { nixpkgs, home-manager, ... }:
-  let
+  outputs = inputs @ { nixpkgs, home-manager, ... }: let 
     system = "x86_64-linux";
-  in {
-    # NixOS config (Acerussy | Computerussy – hosts)
-    nixosConfigurations = {
-      Acerussy = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs system; };
-        modules = [
-          ./hosts/Acerussy.nix
-        ];
-      };
-      Computerussy = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs system; };
-        modules = [
-          ./hosts/Computerussy.nix
-        ];
-      };
-    };
-
-    # HomeManager, user config
-    homeConfigurations = {
-      "mikorzen@Acerussy" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs { inherit system; };
-        extraSpecialArgs = { inherit inputs; };
-        modules = [
-          ./users+hosts/mikorzen+Acerussy.nix
-        ];
-      };
-      "mikorzen@Computerussy" = home-manager.lib.homeManagerConfiguration {
-        pkgs = import nixpkgs { inherit system; };
-        extraSpecialArgs = { inherit inputs; };
-        modules = [
-          ./users+hosts/mikorzen+Computerussy.nix
-        ];
-      };
-    };
+  in { 
+    nixosConfigurations = (import ./flake/os.nix { inherit inputs nixpkgs system; });
+    homeConfigurations  = (import ./flake/home.nix { inherit inputs nixpkgs system home-manager; });
   };
 }

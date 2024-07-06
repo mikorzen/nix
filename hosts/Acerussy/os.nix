@@ -1,4 +1,4 @@
-{ # User agnostic, Acerussy specific OS config
+{ # user-agnostic Acerussy-specific NixOS configuration
   imports = [ 
     ./os/hardware.nix
     ./os/packages.nix

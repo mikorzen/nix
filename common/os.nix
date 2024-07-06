@@ -1,4 +1,4 @@
-{ # User agnostic, host agnostic OS config
+{ # user-agnostic host-agnostic NixOS configuration
   imports = [
     ./os/bootloader.nix
     ./os/envars.nix

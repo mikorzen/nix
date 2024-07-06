@@ -1,4 +1,4 @@
-# User agnostic, Acerussy specific hardware config
+# user-agnostic Acerussy-specific NixOS hardware configuration
 { config, lib, modulesPath, ... }: with lib; {
   imports = [ 
     (modulesPath + "/installer/scan/not-detected.nix")

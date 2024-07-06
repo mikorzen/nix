@@ -1,4 +1,4 @@
-{ # User agnostic, Acerussy specific home config
+{ # user-agnostic Acerussy-specific home-manager configuration
   imports = [
     ./home/hypr.nix
   ];

@@ -1,4 +1,4 @@
-{ # mikorzen specific, host agnostic home config
+{ # mikorzen-specific host-agnostic home-manager configuration
   imports = [
     # ./home/ags.nix
     ./home/hypr.nix

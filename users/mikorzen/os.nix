@@ -1,4 +1,4 @@
-# mikorzen specific, host agnostic OS config
+# mikorzen-specific host-agnostic NixOS configuration
 { pkgs, ... }: {
   users.users."mikorzen" = {
     isNormalUser = true;

@@ -1,4 +1,4 @@
-# User agnostic, host agnostic home config
+# user-agnostic host-agnostic home-manager configuration
 { pkgs, ... }: { 
   imports = [
     # ./home/ags.nix

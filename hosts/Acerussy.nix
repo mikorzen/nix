@@ -1,9 +1,10 @@
 {
   imports = [
-    ../hosts/Acerussy/hardware.nix
+    ../common/os.nix          # user-agnostic     host-agnostic     NixOS configuration
 
-    ../common/os.nix
-    ../hosts/Acerussy/os.nix
-    ../users/mikorzen/os.nix
+    ./Acerussy/hardware.nix   # user-agnostic     Acerussy-specific NixOS hardware configuration
+    ./Acerussy/os.nix         # user-agnostic     Acerussy-specific NixOS configuration
+
+    ../users/mikorzen/os.nix  # mikorzen-specific host-agnostic     NixOS configuration
   ];
 }
