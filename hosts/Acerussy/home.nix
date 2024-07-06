@@ -1,7 +1,5 @@
-{
+{ # User agnostic, Acerussy specific home config
   imports = [
-    ../../common/home.nix
-
     ./home/hypr.nix
   ];
 }

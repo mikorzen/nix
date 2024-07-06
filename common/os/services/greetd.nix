@@ -1,14 +1,14 @@
-{ pkgs, ... }: {
+{
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "tuigreet --time --cmd Hyprland";
+        command = "tuigreet --time -r --remember-user-session --asterisks";
         user = "greeter";
       };
     };
   };
-  
+
   # Stuff so that the boot log doesn't spill into tuigreet
   systemd.services.greetd.serviceConfig = {
     Type = "idle";

@@ -1,6 +1,9 @@
 {
   imports = [
-    ./Acerussy/hardware.nix
-    ./Acerussy/os.nix
+    ../hosts/Acerussy/hardware.nix
+
+    ../common/os.nix
+    ../hosts/Acerussy/os.nix
+    ../users/mikorzen/os.nix
   ];
 }

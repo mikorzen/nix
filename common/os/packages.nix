@@ -1,18 +1,9 @@
 { pkgs, ... }: {
-  nixpkgs.config.allowUnfree = true;
-
   environment.systemPackages = with pkgs; [
-    # session manager
-    greetd.tuigreet
+    blackbox-terminal     # terminal
 
-    # terminal
-    (warp-terminal.override { waylandSupport = true; })  
-    blackbox-terminal
-
-    # file manager
-    gnome.nautilus 
-
-    # browser
-    microsoft-edge     
+    pkgs.greetd.tuigreet  # login manager
+    gnome.nautilus        # file manager
+    firefox               # browser
   ];
 }

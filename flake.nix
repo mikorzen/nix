@@ -13,6 +13,11 @@
       url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    rip2 = {
+      url = "github:MilesCranmer/rip2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs @ { nixpkgs, home-manager, ... }:
@@ -41,14 +46,14 @@
         pkgs = import nixpkgs { inherit system; };
         extraSpecialArgs = { inherit inputs; };
         modules = [
-          ./hosts/Acerussy/home.nix
+          ./users+hosts/mikorzen+Acerussy.nix
         ];
       };
       "mikorzen@Computerussy" = home-manager.lib.homeManagerConfiguration {
         pkgs = import nixpkgs { inherit system; };
         extraSpecialArgs = { inherit inputs; };
         modules = [
-          ./hosts/Computerussy/home.nix
+          ./users+hosts/mikorzen+Computerussy.nix
         ];
       };
     };

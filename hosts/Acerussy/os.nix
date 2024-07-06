@@ -1,10 +1,8 @@
-{
+{ # User agnostic, Acerussy specific OS config
   imports = [ 
-    ../../common/os.nix
-
-    ./os/bluetooth.nix
+    ./os/hardware.nix
     ./os/packages.nix
-    ./os/power.nix
+    ./os/services.nix
   ];
 
   networking.hostName = "Acerussy";

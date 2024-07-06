@@ -1,9 +1,9 @@
 {
   programs = {
-    hyprland.enable = true;
-    git.enable = true;
-    fish.enable = true;
-    nh.enable = true;
-    dconf.enable = true;
+    hyprland.enable = true;  # window manager
+    git.enable = true;       # version control
+    fish.enable = true;      # shell
+    nh.enable = true;        # nix helper
+    dconf.enable = true;     # GNOME-adjacent settings
   };
 }

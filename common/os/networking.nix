@@ -8,12 +8,4 @@
       "2620:fe::9#dns.quad9.net"      
     ];
   };
-
-  mainUser.groups = [ "networkmanager" ];
-
-  services.resolved = {
-    enable = true;
-    domains = [ "~." ];
-    dnsovertls = "opportunistic";
-  };
 }
