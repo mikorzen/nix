@@ -3,7 +3,6 @@
     ./services/greetd.nix    # greeter
     ./services/pipewire.nix  # sound
     ./services/resolved.nix  # DNS
-    ./services/xserver.nix   # Xserver (keyboard layout and whatnot)
   ];
 
   services = {

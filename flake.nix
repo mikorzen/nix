@@ -23,7 +23,7 @@
   outputs = inputs @ { nixpkgs, home-manager, ... }: let 
     system = "x86_64-linux";
   in { 
-    nixosConfigurations = (import ./flake/os.nix { inherit inputs nixpkgs system; });
-    homeConfigurations  = (import ./flake/home.nix { inherit inputs nixpkgs system home-manager; });
+    nixosConfigurations = import ./flake/os.nix { inherit inputs nixpkgs system; };
+    homeConfigurations  = import ./flake/home.nix { inherit inputs nixpkgs system home-manager; };
   };
 }

@@ -1,7 +1,8 @@
 { # user-agnostic host-agnostic NixOS configuration
   imports = [
-    ./os/bootloader.nix
+    ./os/boot.nix
     ./os/envars.nix
+    ./os/input.nix
     ./os/locale.nix
     ./os/networking.nix
     ./os/programs.nix

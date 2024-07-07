@@ -8,10 +8,10 @@
   ];
 
   programs.fish.plugins = [
-    { name = "autopair"; src = fishPlugins.autopair.src; }
-    { name = "fzf"; src = fishPlugins.fzf-fish.src; }
-    { name = "puffer"; src = fishPlugins.puffer.src; }
-    { name = "sponge"; src = fishPlugins.sponge.src; }
-    { name = "z"; src = fishPlugins.z.src; }
+    { name = "autopair"; inherit (fishPlugins.autopair) src; }
+    { name = "fzf"; inherit (fishPlugins.fzf-fish) src; }
+    { name = "puffer"; inherit (fishPlugins.puffer) src; }
+    { name = "sponge"; inherit (fishPlugins.sponge) src; }
+    { name = "z"; inherit (fishPlugins.z) src; }
   ];
 }

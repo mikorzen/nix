@@ -15,6 +15,4 @@
       LC_TIME = "pl_PL.UTF-8";
     };
   };
-
-  console.keyMap = "pl2";
 }
