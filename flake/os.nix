@@ -2,10 +2,10 @@
   "Acerussy" = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit inputs system; };
     modules = [
-    ../common/os.nix                 # user-agnostic     host-agnostic     NixOS configuration
-    ../hosts/Acerussy/hardware.nix   # user-agnostic     Acerussy-specific NixOS hardware configuration
-    ../hosts/Acerussy/os.nix         # user-agnostic     Acerussy-specific NixOS configuration
-    ../users/mikorzen/os.nix         # mikorzen-specific host-agnostic     NixOS configuration
+      ../common/os.nix                 # user-agnostic     host-agnostic     NixOS configuration
+      ../hosts/Acerussy/hardware.nix   # user-agnostic     Acerussy-specific NixOS hardware configuration
+      ../hosts/Acerussy/os.nix         # user-agnostic     Acerussy-specific NixOS configuration
+      ../users/mikorzen/os.nix         # mikorzen-specific host-agnostic     NixOS configuration
     ];
   };
 
