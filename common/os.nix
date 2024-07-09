@@ -3,12 +3,10 @@
     ./os/boot.nix
     ./os/envars.nix
     ./os/input.nix
+    ./os/installs.nix
     ./os/locale.nix
     ./os/networking.nix
-    ./os/programs.nix
-    ./os/packages.nix
     ./os/security.nix
-    ./os/services.nix
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

@@ -7,10 +7,10 @@
     ./home/theme.nix
   ];
 
-  home = {
+  home = rec {
     username = "mikorzen";
-    homeDirectory = "/home/mikorzen";
-    sessionVariables.FLAKE = "/home/mikorzen/.dotfiles/nix";
+    homeDirectory = "/home/${username}";
+    sessionVariables.FLAKE = "${homeDirectory}/.nix";
   };
 
   nixpkgs.config.allowUnfree = true;

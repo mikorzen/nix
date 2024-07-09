@@ -3,8 +3,5 @@
     ./hyprland/binds.nix
   ];
 
-  wayland.windowManager.hyprland = {
-    enable = true;
-    settings.exec-once = [ "hyprpaper" "ags" ];
-  };
+  wayland.windowManager.hyprland.settings.exec-once = [ "hyprpaper" ];
 }

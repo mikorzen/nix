@@ -6,5 +6,11 @@
     ./hyprlock/time.nix
   ];
 
-  programs.hyprlock.enable = true;
+  programs.hyprlock = {
+    enable = true;
+    settings.general = {
+      disable_loading_bar = true;
+      ignore_empty_input = true;
+    };
+  };
 }

@@ -13,11 +13,6 @@
       url = "github:Aylur/ags";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    rip2 = {
-      url = "github:MilesCranmer/rip2";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs @ { nixpkgs, home-manager, ... }: let 

@@ -1,9 +1,29 @@
-{ lib, ... }: {
-  wayland.windowManager.hyprland.settings = {
-    "$terminal" = lib.mkForce "warp-terminal";
-    "$terminal-backup" = "blackbox";
-    "$browser" = lib.mkForce "microsoft-edge";
+{ lib, ... }: let
+  terminal = {
+    name = "warp-terminal";
+    class = "dev.warp.Warp";
+  };
+  terminal-backup = {
+    name = "blackbox";
+    class = "com.raggesilver.BlackBox";
+  };
+  browser = {
+    name = "microsoft-edge";
+    class = "microsoft-edge";
+  };
+in {
+  wayland.windowManager.hyprland.settings = with lib; {
+    "$terminal"      = mkForce terminal.name;
+    "$terminalClass" = mkForce terminal.class;
 
-    bind = [ "$mainMod, Y, exec, $terminal-backup" ];
+    "$terminalBackup"      = mkForce terminal-backup.name;
+    "$terminalBackupClass" = mkForce terminal-backup.class;
+
+    "$browser"      = mkForce browser.name;
+    "$browserClass" = mkForce browser.class;
+
+    bind =  [ 
+      "$mainMod, Y, exec, hdrop -c $terminalBackupClass $terminalBackup"  # depends on hdrop
+    ];
   };
 }

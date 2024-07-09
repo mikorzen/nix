@@ -6,7 +6,7 @@
     # shadow_range = 8;
 
     dim_inactive = true;
-    dim_strength = 0.3;
+    dim_strength = 0.2;
 
     blur.enabled = false;
   };

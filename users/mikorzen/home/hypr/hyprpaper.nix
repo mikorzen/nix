@@ -2,8 +2,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "${config.home.homeDirectory}/Pictures/Wallpapers/wall.png" ];
-      wallpaper = [ ",${config.home.homeDirectory}/Pictures/Wallpapers/wall.png" ];
+      preload = [ "${config.xdg.userDirs.pictures}/Wallpapers/wall.png" ];
+      wallpaper = [ ",${config.xdg.userDirs.pictures}/Wallpapers/wall.png" ];
     };
   };
 }

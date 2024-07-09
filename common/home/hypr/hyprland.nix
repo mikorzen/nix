@@ -13,6 +13,6 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    settings.exec-once = [ "hyprpaper" "ags" ];
+    settings.exec-once = [ "ags" ];
   };
 }

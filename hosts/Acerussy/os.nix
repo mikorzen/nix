@@ -1,8 +1,7 @@
 { # user-agnostic Acerussy-specific NixOS configuration
   imports = [ 
     ./os/hardware.nix
-    ./os/packages.nix
-    ./os/services.nix
+    ./os/software.nix
   ];
 
   networking.hostName = "Acerussy";

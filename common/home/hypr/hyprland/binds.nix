@@ -1,43 +1,81 @@
-{
+let 
+  terminal = {
+    name = "blackbox";
+    class = "com.raggesilver.BlackBox";
+  };
+  fileManager = {
+    name = "nautilus";
+    class = "org.gnome.Nautilus";
+  };
+  browser = {
+    name = "firefox";
+    class = "firefox";
+  };
+in {
   wayland.windowManager.hyprland.settings = {
+    "$mainScreen" = "eDP-1";
     "$mainMod" = "SUPER";
-    "$terminal" = "blackbox";
-    "$fileManager" = "nautilus --new-window";
-    "$browser" = "firefox";
+
+    "$terminal"      = terminal.name;
+    "$terminalClass" = terminal.class;
+
+    "$fileManager"      = fileManager.name;
+    "$fileManagerClass" = fileManager.class;
+
+    "$browser"      = browser.name;
+    "$browserClass" = browser.class;
 
     bind = [
-      "$mainMod, T, exec, $terminal"
-      "$mainMod, E, exec, $fileManager"
-      "$mainMod, B, exec, $browser"
+      # description (dependencies)
+      "$mainMod, T, exec, hdrop -c $terminalClass $terminal"        # launch terminal (hdrop, blackbox-terminal)
+      "$mainMod, E, exec, hdrop -c $fileManagerClass $fileManager"  # launch file manager (hdrop, nautilus)
+      "$mainMod, B, exec, hdrop -c $browserClass $browser "         # launch browser (hdrop, firefox)
       "$mainMod, D, exec, wofi --show drun"
 
-      "$mainMod, Q, killactive,"
-      "$mainMod, L, exec, hyprlock"
-      "$mainMod, K, exit,"
+      "$mainMod, Q, killactive,"     # close (kill) active window
+      "$mainMod, L, exec, hyprlock"  # lock screen (hyprlock)
+      "$mainMod, K, exit,"           # exit the window manager
 
-      "$mainMod, F, togglefloating,"
-      "$mainMod, P, pseudo, # dwindle"
-      "$mainMod, J, togglesplit, # dwindle"
+      "$mainMod, F, togglefloating,"         # toggle floating mode
+      "$mainMod, P, pseudo, # dwindle"       # pseudo tiling mode
+      "$mainMod, J, togglesplit, # dwindle"  # toggle split mode
+
+      # Screenshotting (hyprshot, satty, wl-clipboard)
+      ",      Print, exec, screenshot -t screen -d $mainScreen"
+      "SHIFT, Print, exec, screenshot -t selection"
+      "CTRL,  Print, exec, screenshot -t window"
+
+      # Volume and Media Control (wireplumber)
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"  
+      ", XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
       
-      # Move focus with mainMod + arrow keys
+      # Move focus
       "$mainMod, left,  movefocus, l"
       "$mainMod, right, movefocus, r"
       "$mainMod, up,    movefocus, u"
       "$mainMod, down,  movefocus, d"
 
-      # Moving windows
+      # Move windows
       "$mainMod SHIFT, left,  swapwindow, l"
       "$mainMod SHIFT, right, swapwindow, r"
       "$mainMod SHIFT, up,    swapwindow, u"
       "$mainMod SHIFT, down,  swapwindow, d"
 
-      # Window resizing                     X  Y
+      # Resize window                       X  Y
       "$mainMod CTRL, left,  resizeactive, -60 0"
       "$mainMod CTRL, right, resizeactive,  60 0"
       "$mainMod CTRL, up,    resizeactive,  0 -60"
       "$mainMod CTRL, down,  resizeactive,  0  60"
 
-      # Switch workspaces with mainMod + [0-9]
+      # Minimize active window (only one at a time)
+      "$mainMod, M, togglespecialworkspace, minimized"
+      "$mainMod, M, movetoworkspace, +0"
+      "$mainMod, M, togglespecialworkspace, minimized"
+      "$mainMod, M, movetoworkspace, special:minimized"
+      "$mainMod, M, togglespecialworkspace, minimized"
+
+      # Switch workspaces
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
@@ -49,7 +87,7 @@
       "$mainMod, 9, workspace, 9"
       "$mainMod, 0, workspace, 10"
 
-      # Move active window to a workspace with mainMod + SHIFT + [0-9]
+      # Move active window to a workspace
       "$mainMod SHIFT, 1, movetoworkspace, 1"
       "$mainMod SHIFT, 2, movetoworkspace, 2"
       "$mainMod SHIFT, 3, movetoworkspace, 3"
@@ -61,21 +99,9 @@
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-      # Minimize (and restore) ONLY one (active) window with mainMod + M
-      "$mainMod, M, togglespecialworkspace, minimized"
-      "$mainMod, M, movetoworkspace, +0"
-      "$mainMod, M, togglespecialworkspace, minimized"
-      "$mainMod, M, movetoworkspace, special:minimized"
-      "$mainMod, M, togglespecialworkspace, minimized"
-
-      # Scroll through existing workspaces with mainMod + scroll
+      # Scroll through existing workspaces
       "$mainMod, mouse_down, workspace, e-1"
-      "$mainMod, mouse_up, workspace, e+1"
-
-      # Volume and Media Control
-      ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
-      ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      "$mainMod, mouse_up,   workspace, e+1"
     ];
 
     bindm = [

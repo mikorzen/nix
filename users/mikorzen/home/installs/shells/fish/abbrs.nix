@@ -16,12 +16,13 @@
 
     cat = "bat";
     du = "dust";
-    rm = "rip";
+    rmt = "gio trash";
 
 
     # nix
     nos = "nh os switch";
     nhs = "nh home switch";
+    nca = "nh clean all";
 
 
     # system
