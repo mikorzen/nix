@@ -16,10 +16,9 @@
   programs = {
     hyprland.enable = true;  # window manager
     fish.enable = true;      # shell
-    git.enable = true;       # git (thats crazy)
+    git.enable = true;       # git (that's crazy)
     dconf.enable = true;     # GNOME-adjacent settings editor
     nh.enable = true;        # nix helper
-    flatpak.enable = true;   # apps in containers
   };
 
   services = {
@@ -27,5 +26,6 @@
     fstrim.enable = true;    # weekly SSD TRIM (I think)
     gvfs.enable = true;      # filesystem support for Nautilus (Trash, etc.)
     power-profiles-daemon.enable = true;  # power profiles
+    flatpak.enable = true;   # apps in containers
   };
 }

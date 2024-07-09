@@ -4,7 +4,6 @@
     ./home/dotfiles.nix
     ./home/hypr.nix
     ./home/installs.nix
-    ./home/scripts.nix
     ./home/xdg.nix
   ];
 

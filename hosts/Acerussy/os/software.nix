@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   imports = [
-    ./installs/upower.nix   # battery
+    ./software/upower.nix   # battery
   ];
 
   environment.systemPackages = with pkgs; [

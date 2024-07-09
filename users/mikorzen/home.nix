@@ -2,8 +2,7 @@
   imports = [
     # ./home/ags.nix
     ./home/hypr.nix
-    ./home/packages.nix
-    ./home/programs.nix
+    ./home/installs.nix
     ./home/theme.nix
   ];
 

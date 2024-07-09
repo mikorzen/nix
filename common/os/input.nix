@@ -24,7 +24,7 @@
       "8fbcbb"  # lightcyan
       "eceff4"  # white
     ];
-  }
+  };
   
   # i18n.inputMethod.enabled = "ibus";  # for emoji input and whatnot (doesn't work idk why)
 }
