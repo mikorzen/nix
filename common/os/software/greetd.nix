@@ -6,7 +6,7 @@
         user = "greeter";
         command = ''
           tuigreet \
-            --time --time-format "%a, %-e %b • %H:%M" \
+            --time --time-format "%A, %-e %B • %H:%M" \
             --greeting "▄█ student debil █▄" \
             --window-padding 1 --container-padding 2 \
             --remember --remember-user-session --asterisks \

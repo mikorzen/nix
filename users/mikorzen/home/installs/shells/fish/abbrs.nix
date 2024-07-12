@@ -1,4 +1,4 @@
-{ 
+{
   programs.fish.shellAbbrs = {
     # utils
     fd = "fd --hidden";

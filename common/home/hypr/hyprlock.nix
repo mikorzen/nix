@@ -11,6 +11,7 @@
     settings.general = {
       disable_loading_bar = true;
       ignore_empty_input = true;
+      immediate_render = true;
     };
   };
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }: with pkgs; { 
+{ pkgs, ... }: with pkgs; {
   home.packages = [
     fishPlugins.autopair
     fishPlugins.fzf-fish

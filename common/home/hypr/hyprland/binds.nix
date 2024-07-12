@@ -1,4 +1,4 @@
-let 
+let
   terminal = {
     name = "blackbox";
     class = "com.raggesilver.BlackBox";
@@ -47,9 +47,9 @@ in {
 
       # Volume and Media Control (wireplumber)
       ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"  
+      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
       ", XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
-      
+
       # Move focus
       "$mainMod, left,  movefocus, l"
       "$mainMod, right, movefocus, r"
@@ -106,7 +106,7 @@ in {
 
     bindm = [
       "$mainMod, mouse:272, movewindow"
-      "$mainMod, mouse:273, resizewindow"      
+      "$mainMod, mouse:273, resizewindow"
     ];
   };
 }

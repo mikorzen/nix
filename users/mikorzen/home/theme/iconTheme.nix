@@ -1,10 +1,10 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 let
   iconTheme = {
     name = "Adwaita";
-    package = pkgs.gnome.adwaita-icon-theme;
+    package = pkgs.adwaita-icon-theme;
   };
-in { 
+in {
   home.packages = with pkgs; [ iconTheme.package ];
   gtk.iconTheme = iconTheme;
 }

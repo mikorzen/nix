@@ -10,7 +10,7 @@
     shadow_passes = 2;
     shadow_size = 2;
 
-    position = "0, 70";
+    position = "0, 180";
     halign = "center";
     valign = "center";
   }];

@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 let
   cursors = {
     name = "Posy_Cursor_Black_125_175";
@@ -13,7 +13,7 @@ let
   };
 in {
   home = {
-    packages = with pkgs; [
+    packages = [
       cursors.package
       hyprcursors.package
     ];

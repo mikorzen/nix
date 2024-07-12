@@ -4,12 +4,13 @@
     ./software/greetd.nix
     ./software/pipewire.nix
     ./software/resolved.nix
+    ./software/docker.nix
   ];
 
   environment.systemPackages = with pkgs; [
     greetd.tuigreet    # login manager
     blackbox-terminal  # terminal
-    gnome.nautilus     # file manager                 
+    nautilus           # file manager
     firefox            # browser
   ];
 

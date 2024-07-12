@@ -6,9 +6,10 @@
     };
     kernelModules = [ "kvm-intel" ];
     extraModulePackages = [ ];
-    kernelParams = [ 
+    kernelParams = [
+      "i915.enable_guc=3"
       # "i915.force_probe=!9a49"  # change driver to XE experimental
-      # "xe.force_probe=9a49" 
-    ];  
+      # "xe.force_probe=9a49"
+    ];
   };
 }

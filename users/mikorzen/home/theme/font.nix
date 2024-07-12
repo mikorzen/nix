@@ -1,4 +1,4 @@
-{ pkgs, ... }: 
+{ pkgs, ... }:
 let
   font = {
     name = "Lato";
@@ -6,6 +6,6 @@ let
     size = 11;
   };
 in {
-  home.packages = with pkgs; [ font.package ];
+  home.packages = [ font.package ];
   gtk.font = font;
 }
