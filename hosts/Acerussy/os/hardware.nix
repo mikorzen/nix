@@ -1,6 +1,6 @@
 # user-agnostic Acerussy-specific NixOS hardware configuration
 { config, lib, modulesPath, ... }: with lib; {
-  imports = [ 
+  imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./hardware/bluetooth.nix
     ./hardware/boot.nix

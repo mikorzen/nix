@@ -1,5 +1,5 @@
 { # user-agnostic Acerussy-specific NixOS configuration
-  imports = [ 
+  imports = [
     ./os/hardware.nix
     ./os/software.nix
   ];
