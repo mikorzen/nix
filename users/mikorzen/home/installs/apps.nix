@@ -8,6 +8,5 @@
     curtail      # image compression
 
     discord
-    ffmpeg_7-full
   ];
 }

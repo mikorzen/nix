@@ -8,6 +8,9 @@
   ];
 
   services = {
+    logind.extraConfig = ''
+      HandlePowerKey=ignore  # prevent shutdown on power key short-press
+    '';
     blueman.enable = true;  # Bluetooth control
   };
 }
