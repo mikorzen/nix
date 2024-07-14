@@ -1,14 +1,17 @@
-{ pkgs, config, ... }: {
-  home = {
-    packages = with pkgs; [
-      glib          # needed for `gio trash` (cli trasher)
-      hdrop         # run/show/hide windows in Hyprland
-      hyprshot      # screenshots for Hyprland
-      satty         # screenshot annotator
-      wl-clipboard  # Wayland clipboard manager
-      dust          # `du` alternative
-    ];
-  };
+{ inputs, pkgs, config, ... }: {
+  imports = [
+    inputs.ags.homeManagerModules.default
+  ];
+
+  home.packages = with pkgs; [
+    glib          # needed for `gio trash` (cli trasher)
+    hdrop         # run/show/hide windows in Hyprland
+    hyprshot      # screenshots for Hyprland
+    satty         # screenshot annotator
+    wl-clipboard  # Wayland clipboard manager
+    dust          # `du` alternative
+  ];
+
 
   programs = {
     eza = {             # `ls` alternative
@@ -26,5 +29,12 @@
     #   enableBashIntegration = false;
     #   enableFishIntegration = false;
     # };
+    ags = {
+      enable = true;
+      configDir = null;
+      # extraPackages = with pkgs; [
+      #   accountsservice
+      # ];
+    };
   };
 }

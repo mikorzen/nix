@@ -1,6 +1,5 @@
 { pkgs, ... }: {
   imports = [
-    ./software/ags.nix
     ./software/fonts.nix
     ./software/greetd.nix
     ./software/pipewire.nix
