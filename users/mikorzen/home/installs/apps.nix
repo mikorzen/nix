@@ -8,5 +8,7 @@
     curtail      # image compression
 
     discord
+
+    stremio
   ];
 }
