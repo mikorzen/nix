@@ -1,6 +1,5 @@
 { # user-agnostic host-agnostic home-manager configuration
   imports = [
-    # ./home/ags.nix
     ./home/dotfiles.nix
     ./home/hypr.nix
     ./home/installs.nix

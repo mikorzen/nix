@@ -1,7 +1,7 @@
 {
   wayland.windowManager.hyprland.settings.general = {
     gaps_in = 5;
-    gaps_out = 15;
+    gaps_out = "5, 15, 15, 15";
 
     border_size = 1;
     "col.active_border" = "rgba(ffff00ee) rgba(ff7900ee) 135deg";

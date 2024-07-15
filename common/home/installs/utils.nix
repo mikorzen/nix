@@ -10,6 +10,10 @@
     satty         # screenshot annotator
     wl-clipboard  # Wayland clipboard manager
     dust          # `du` alternative
+
+    swww
+    matugen
+    dart-sass
   ];
 
 
@@ -32,9 +36,9 @@
     ags = {
       enable = true;
       configDir = null;
-      # extraPackages = with pkgs; [
-      #   accountsservice
-      # ];
+      extraPackages = with pkgs; [
+        accountsservice
+      ];
     };
   };
 }

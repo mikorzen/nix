@@ -27,10 +27,12 @@ in {
 
     bind = [
       # description (dependencies)
+      "$mainMod, R, exec, ags -r \"App.toggleWindow('launcher')\""  # launch ags launcher
+
       "$mainMod, T, exec, hdrop -c $terminalClass $terminal"        # launch terminal (hdrop, blackbox-terminal)
       "$mainMod, E, exec, hdrop -c $fileManagerClass $fileManager"  # launch file manager (hdrop, nautilus)
       "$mainMod, B, exec, hdrop -c $browserClass $browser "         # launch browser (hdrop, firefox)
-      "$mainMod, D, exec, wofi --show drun"
+      # "$mainMod, D, exec, wofi --show drun"
 
       "$mainMod, Q, killactive,"     # close (kill) active window
       "$mainMod, L, exec, hyprlock"  # lock screen (hyprlock)
@@ -46,8 +48,8 @@ in {
       "CTRL,  Print, exec, screenshot -t window"
 
       # Volume and Media Control (wireplumber)
-      ", XF86AudioRaiseVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
-      ", XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+      ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
+      ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
       ", XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
       # Move focus
