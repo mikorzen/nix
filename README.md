@@ -13,8 +13,8 @@ Yellow gold: `#ffbb00`
 - [x] ? find some nice icon theme
 - [ ] secrets management?
 - [ ] full disk encryption (`luks`)?
-- [ ] fix drag and drop between gtk apps?
+- [ ] fix drag and drop between gtk apps? (how tho lol)
 - [ ] secure boot (`lanzaboote`)?
-- [ ] change `zstd` compression to `lzo`
-- [ ] add `noatime` to partiton options everywhere
+- [x] change `zstd` compression to `lzo`
+- [x] add `noatime` to partiton options everywhere
 - [ ] ~~die~~
