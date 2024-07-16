@@ -25,6 +25,7 @@
     git.enable = true;       # git (that's crazy)
     dconf.enable = true;     # GNOME-adjacent settings editor
     nh.enable = true;        # nix helper
+    steam.enable = true;     # gaming
   };
 
   services = {
@@ -33,6 +34,5 @@
     gvfs.enable = true;      # filesystem support for Nautilus (Trash, etc.)
     power-profiles-daemon.enable = true;  # power profiles
     flatpak.enable = true;   # apps in containers
-    steam.enable = true;     # gaming
   };
 }
