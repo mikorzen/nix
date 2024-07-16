@@ -13,6 +13,8 @@
     nautilus           # file manager
     firefox            # browser
 
+    posy-cursors  # cursors for flatpak apps
+
     # for podman (containers)
     dive
     podman-tui

@@ -8,8 +8,8 @@ Yellow gold: `#ffbb00`
 - [x] clipboard manager (clipse)
 - [x] find some apps for general stuff
 - [ ] flatpak apps
-- [ ] steam
-- [ ] bottles
+- [x] steam
+- [x] bottles
 - [ ] find some nice icon theme
 - [ ] secrets management?
 - [ ] full disk encryption (`luks`)?

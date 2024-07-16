@@ -1,6 +1,7 @@
 ## __Flatpaks to install__
 * flatpak manager `io.github.flattool.Warehouse`
 * flatpak permission manager `com.github.tchx84.Flatseal`
+* flatpak cleaner `io.github.giantpinkrobots.flatsweep`
 * video downloader `com.github.unrud.VideoDownloader` (there is Parabolic as a native app)
 * weather `dev.salaniLeo.forecast`
 * bluetooth manager `io.emeric.toolblex`
