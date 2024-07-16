@@ -1,6 +1,7 @@
 import PanelButton from "../PanelButton";
 import icons from "lib/icons";
 import asusctl from "service/asusctl";
+import inhibitor from "service/inhibitor";
 
 const notifications = await Service.import("notifications");
 const bluetooth = await Service.import("bluetooth");
@@ -19,6 +20,14 @@ const ProfileIndicator = () => {
 
     return Widget.Icon({ visible, icon });
 };
+
+const InhibitorIndicator = () => {
+    const inhibited = inhibitor.bind("inhibited");
+    return Widget.Icon({
+        visible: inhibitor.bind("inhibited"),
+        icon: icons.inhibitor.awake,
+    });
+}
 
 const ModeIndicator = () => {
     if (!asusctl.available) {
@@ -110,6 +119,7 @@ export default () =>
         on_scroll_down: () => (audio.speaker.volume -= 0.02),
         child: Widget.Box([
             ProfileIndicator(),
+            InhibitorIndicator(),
             ModeIndicator(),
             DNDIndicator(),
             BluetoothIndicator(),

@@ -102,6 +102,10 @@ export default {
         keyboard: "keyboard-brightness-symbolic",
         screen: "display-brightness-symbolic",
     },
+    inhibitor: {
+        awake: "idle-inhibited-symbolic",
+        sleepy: "idle-symbolic",
+    },
     powerMenu: {
         sleep: "weather-clear-night-symbolic",
         reboot: "system-reboot-symbolic",
