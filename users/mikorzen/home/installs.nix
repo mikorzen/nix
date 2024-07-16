@@ -1,7 +1,7 @@
 {
   imports = [
-    ./installs/apps.nix
-    ./installs/dev.nix
+    ./installs/applications.nix
+    ./installs/development.nix
     ./installs/shells.nix
     ./installs/terminal.nix
   ];

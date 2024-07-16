@@ -33,5 +33,6 @@
     gvfs.enable = true;      # filesystem support for Nautilus (Trash, etc.)
     power-profiles-daemon.enable = true;  # power profiles
     flatpak.enable = true;   # apps in containers
+    steam.enable = true;     # gaming
   };
 }

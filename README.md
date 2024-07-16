@@ -7,6 +7,7 @@ Yellow gold: `#ffbb00`
 - [x] write hypridle inhibit widget for ags
 - [x] clipboard manager (clipse)
 - [x] find some apps for general stuff
+- [ ] flatpak apps
 - [ ] steam
 - [ ] bottles
 - [ ] find some nice icon theme
