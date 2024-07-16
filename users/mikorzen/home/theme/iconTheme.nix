@@ -2,7 +2,7 @@
 let
   iconTheme = {
     name = "Adwaita";
-    package = pkgs.adwaita-icon-theme;
+    package = pkgs.morewaita-icon-theme;
   };
 in {
   home.packages = with pkgs; [ iconTheme.package ];

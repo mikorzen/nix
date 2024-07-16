@@ -13,7 +13,11 @@
     nautilus           # file manager
     firefox            # browser
 
-    posy-cursors  # cursors for flatpak apps
+    posy-cursors          # cursors for flatpak apps
+
+    # icons for flatpak apps
+    adwaita-icon-theme
+    morewaita-icon-theme
 
     # for podman (containers)
     dive
