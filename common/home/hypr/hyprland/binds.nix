@@ -16,10 +16,13 @@ in {
     "$mainScreen" = "eDP-1";
     "$mainMod" = "SUPER";
 
+    "$primaryMouse"   = "mouse:272";
+    "$secondaryMouse" = "mouse:273";
+
     "$terminal"      = terminal.name;
     "$terminalClass" = terminal.class;
 
-    "$terminalBackup" = terminal.name;
+    "$terminalBackup"      = terminal.name;
     "$terminalBackupClass" = terminal.class;
 
     "$fileManager"      = fileManager.name;
@@ -46,42 +49,42 @@ in {
       "$mainMod, P, pseudo, # dwindle"       # pseudo tiling mode
       "$mainMod, J, togglesplit, # dwindle"  # toggle split mode
 
-      # Screenshotting (hyprshot, satty, wl-clipboard)
+      # screenshotting (hyprshot, satty, wl-clipboard)
       ",      Print, exec, screenshot -t screen -d $mainScreen"
       "SHIFT, Print, exec, screenshot -t selection"
       "CTRL,  Print, exec, screenshot -t window"
 
-      # Volume and Media Control (wireplumber)
+      # volume and media control (wireplumber)
       ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"
       ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%-"
       ", XF86AudioMute,        exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
 
-      # Move focus
+      # move focus
       "$mainMod, left,  movefocus, l"
       "$mainMod, right, movefocus, r"
       "$mainMod, up,    movefocus, u"
       "$mainMod, down,  movefocus, d"
 
-      # Move windows
+      # move windows
       "$mainMod SHIFT, left,  swapwindow, l"
       "$mainMod SHIFT, right, swapwindow, r"
       "$mainMod SHIFT, up,    swapwindow, u"
       "$mainMod SHIFT, down,  swapwindow, d"
 
-      # Resize window                       X  Y
+      # resize window                       X  Y
       "$mainMod CTRL, left,  resizeactive, -60 0"
       "$mainMod CTRL, right, resizeactive,  60 0"
       "$mainMod CTRL, up,    resizeactive,  0 -60"
       "$mainMod CTRL, down,  resizeactive,  0  60"
 
-      # Minimize active window (only one at a time)
+      # minimize active window (only one at a time)
       "$mainMod, M, togglespecialworkspace, minimized"
       "$mainMod, M, movetoworkspace, +0"
       "$mainMod, M, togglespecialworkspace, minimized"
       "$mainMod, M, movetoworkspace, special:minimized"
       "$mainMod, M, togglespecialworkspace, minimized"
 
-      # Switch workspaces
+      # switch workspaces
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
@@ -93,7 +96,7 @@ in {
       "$mainMod, 9, workspace, 9"
       "$mainMod, 0, workspace, 10"
 
-      # Move active window to a workspace
+      # move active window to a workspace
       "$mainMod SHIFT, 1, movetoworkspace, 1"
       "$mainMod SHIFT, 2, movetoworkspace, 2"
       "$mainMod SHIFT, 3, movetoworkspace, 3"
@@ -105,14 +108,14 @@ in {
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
 
-      # Scroll through existing workspaces
+      # scroll through existing workspaces
       "$mainMod, mouse_down, workspace, e-1"
       "$mainMod, mouse_up,   workspace, e+1"
     ];
 
     bindm = [
-      "$mainMod, mouse:272, movewindow"
-      "$mainMod, mouse:273, resizewindow"
+      "$mainMod, $primaryMouse, movewindow"
+      "$mainMod, $secondaryMouse, resizewindow"
     ];
   };
 }

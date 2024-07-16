@@ -5,7 +5,7 @@
     ./hyprland/decoration.nix
     ./hyprland/general.nix
     ./hyprland/input.nix
-    ./hyprland/layout.nix
+    # ./hyprland/layout.nix
     ./hyprland/misc.nix
     ./hyprland/plugins.nix
     ./hyprland/rules.nix
