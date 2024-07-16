@@ -1,7 +1,7 @@
 { pkgs, ... }: {
   imports = [
-    ./dev/git.nix     # version control
-    ./dev/ruff.nix    # Python formatter+linter
+    ./development/git.nix     # version control
+    ./development/ruff.nix    # Python formatter+linter
   ];
 
   home.packages = with pkgs; [
