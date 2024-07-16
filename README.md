@@ -10,7 +10,7 @@ Yellow gold: `#ffbb00`
 - [x] flatpak apps
 - [x] steam
 - [x] bottles
-- [ ] find some nice icon theme
+- [x] ? find some nice icon theme
 - [ ] secrets management?
 - [ ] full disk encryption (`luks`)?
 - [ ] fix drag and drop between gtk apps?

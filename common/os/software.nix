@@ -16,7 +16,7 @@
     posy-cursors          # cursors for flatpak apps
 
     # icons for flatpak apps
-    adwaita-icon-theme
+    # adwaita-icon-theme
     morewaita-icon-theme
 
     # for podman (containers)
