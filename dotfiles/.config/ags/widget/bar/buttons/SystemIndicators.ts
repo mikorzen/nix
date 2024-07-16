@@ -22,12 +22,11 @@ const ProfileIndicator = () => {
 };
 
 const InhibitorIndicator = () => {
-    const inhibited = inhibitor.bind("inhibited");
     return Widget.Icon({
         visible: inhibitor.bind("inhibited"),
         icon: icons.inhibitor.awake,
     });
-}
+};
 
 const ModeIndicator = () => {
     if (!asusctl.available) {
