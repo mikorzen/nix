@@ -3,17 +3,17 @@
     "/" = {
       device = "/dev/disk/by-uuid/ed070091-447d-410f-b897-bc0066d048e4";
       fsType = "btrfs";
-      options = [ "subvol=root" "compress=zstd" ];
+      options = [ "subvol=root" "compress=lzo" "noatime" ];
     };
     "/home" = {
       device = "/dev/disk/by-uuid/ed070091-447d-410f-b897-bc0066d048e4";
       fsType = "btrfs";
-      options = [ "subvol=home" "compress=zstd" ];
+      options = [ "subvol=home" "compress=lzo" "noatime" ];
     };
     "/nix" = {
       device = "/dev/disk/by-uuid/ed070091-447d-410f-b897-bc0066d048e4";
       fsType = "btrfs";
-      options = [ "subvol=nix" "compress=zstd" "noatime" ];
+      options = [ "subvol=nix" "compress=lzo" "noatime" ];
     };
     "/swap" = {
       device = "/dev/disk/by-uuid/ed070091-447d-410f-b897-bc0066d048e4";
