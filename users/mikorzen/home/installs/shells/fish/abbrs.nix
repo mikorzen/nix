@@ -20,7 +20,7 @@
 
 
     # nix
-    ncu = "nix-channel-update";
+    ncu = "nix-channel --update";
     nfu = "nix flake update";
     nos = "nh os switch";
     nhs = "nh home switch";
