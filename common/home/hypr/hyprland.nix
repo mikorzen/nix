@@ -8,11 +8,12 @@
     ./hyprland/layout.nix
     ./hyprland/misc.nix
     ./hyprland/plugins.nix
+    ./hyprland/rules.nix
     ./hyprland/screen.nix
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
-    settings.exec-once = [ "ags" ];
+    settings.exec-once = [ "ags" "clipse -listen" ];
   };
 }

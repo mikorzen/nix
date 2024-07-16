@@ -19,6 +19,9 @@ in {
     "$terminal"      = terminal.name;
     "$terminalClass" = terminal.class;
 
+    "$terminalBackup" = terminal.name;
+    "$terminalBackupClass" = terminal.class;
+
     "$fileManager"      = fileManager.name;
     "$fileManagerClass" = fileManager.class;
 
@@ -29,10 +32,11 @@ in {
       # description (dependencies)
       "$mainMod, R, exec, ags -r \"App.toggleWindow('launcher')\""  # launch ags launcher
 
-      "$mainMod, T, exec, hdrop -c $terminalClass $terminal"        # launch terminal (hdrop, blackbox-terminal)
-      "$mainMod, E, exec, hdrop -c $fileManagerClass $fileManager"  # launch file manager (hdrop, nautilus)
-      "$mainMod, B, exec, hdrop -c $browserClass $browser "         # launch browser (hdrop, firefox)
-      # "$mainMod, D, exec, wofi --show drun"
+      "$mainMod, T, exec, hdrop -c $terminalClass $terminal"              # launch terminal (hdrop, blackbox-terminal)
+      "$mainMod, Y, exec, hdrop -c $terminalBackupClass $terminalBackup"  # launch backup terminal (hdrop, blackbox-terminal)
+      "$mainMod, E, exec, hdrop -c $fileManagerClass $fileManager"        # launch file manager (hdrop, nautilus)
+      "$mainMod, B, exec, hdrop -c $browserClass $browser"                # launch browser (hdrop, firefox)
+      "$mainMod, V, exec, blackbox -c clipse"  # launch clipboard manager (blackbox-terminal, clipse)
 
       "$mainMod, Q, killactive,"     # close (kill) active window
       "$mainMod, L, exec, hyprlock"  # lock screen (hyprlock)

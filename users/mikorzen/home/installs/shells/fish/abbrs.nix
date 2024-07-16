@@ -26,7 +26,7 @@
 
 
     # system
-    wifi = "nmtui";
+    net = "nmtui";
     bt = "blueman-manager";
     sus = "systemctl suspend";
   };

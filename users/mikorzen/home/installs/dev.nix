@@ -5,6 +5,8 @@
   ];
 
   home.packages = with pkgs; [
+    pods  # podman (containers) GUI manager
+
     # Python
     python3
     python312Packages.pip

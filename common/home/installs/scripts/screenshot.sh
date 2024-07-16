@@ -11,8 +11,8 @@ SHORT_ARGS=t:d:h
 LONG_ARGS=target:,display:,help
 OPTIONS=$(getopt -o $SHORT_ARGS -l $LONG_ARGS -- "$@")
 
-if [ "$#" -lt 2 ]; then  # If the number of arguments is less than 2, display help
-  help                   # (there is always 1 argument by default, so, in effect, if it's less than 1)
+if [ "$#" -lt 2 ]; then  # If the number of arguments is less than 2, display help (there seems
+    help                 # to always be 1 argument by default, so, in effect, if it's less than 1)
 fi
 
 eval set -- "$OPTIONS"

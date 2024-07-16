@@ -21,9 +21,5 @@ in {
 
     "$browser"      = mkForce browser.name;
     "$browserClass" = mkForce browser.class;
-
-    bind =  [
-      "$mainMod, Y, exec, hdrop -c $terminalBackupClass $terminalBackup"  # depends on hdrop
-    ];
   };
 }

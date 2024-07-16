@@ -1,10 +1,10 @@
 { pkgs, ... }: {
   imports = [
+    ./software/containers.nix
     ./software/fonts.nix
     ./software/greetd.nix
     ./software/pipewire.nix
     ./software/resolved.nix
-    ./software/docker.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -12,6 +12,11 @@
     blackbox-terminal  # terminal
     nautilus           # file manager
     firefox            # browser
+
+    # for podman (containers)
+    dive
+    podman-tui
+    podman-compose
   ];
 
   programs = {
