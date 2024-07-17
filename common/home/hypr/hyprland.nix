@@ -17,8 +17,7 @@
     settings.exec-once = [
       "ags"
       "clipse -listen"
-      "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"  # workaround for sound not immediately working after boot (mute and unmute)
-      "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      "fix-audio"  # workaround for audio not working after boot (mute and unmute)
     ];
   };
 }

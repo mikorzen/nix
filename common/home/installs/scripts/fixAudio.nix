@@ -1,3 +1,4 @@
+# workaround for audio not working after boot (mute and unmute)
 { pkgs, ... }: {
   home.packages = with pkgs; [
     (writeShellApplication {

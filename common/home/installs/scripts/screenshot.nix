@@ -1,3 +1,4 @@
+# screenshot procedure
 { pkgs, ... }: {
   home.packages = with pkgs; [
     (writeShellApplication {
