@@ -17,7 +17,7 @@
     settings.exec-once = [
       "ags"
       "clipse -listen"
-      "fix-audio"  # workaround for audio not working after boot (mute and unmute)
+      "sleep 3; fix-audio"  # workaround for audio not working after boot (mute and unmute)
     ];
   };
 }
