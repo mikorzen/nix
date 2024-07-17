@@ -1,22 +1,22 @@
 {
   fileSystems = {
     "/" = {
-      device = "/dev/disk/by-uuid/ed070091-447d-410f-b897-bc0066d048e4";
+      device = "/dev/disk/by-uuid/5ec20f88-6d2a-4d99-b36e-d9f6544df727";
       fsType = "btrfs";
       options = [ "subvol=root" "compress=lzo" "noatime" ];
     };
     "/home" = {
-      device = "/dev/disk/by-uuid/ed070091-447d-410f-b897-bc0066d048e4";
+      device = "/dev/disk/by-uuid/5ec20f88-6d2a-4d99-b36e-d9f6544df727";
       fsType = "btrfs";
       options = [ "subvol=home" "compress=lzo" "noatime" ];
     };
     "/nix" = {
-      device = "/dev/disk/by-uuid/ed070091-447d-410f-b897-bc0066d048e4";
+      device = "/dev/disk/by-uuid/5ec20f88-6d2a-4d99-b36e-d9f6544df727";
       fsType = "btrfs";
       options = [ "subvol=nix" "compress=lzo" "noatime" ];
     };
     "/swap" = {
-      device = "/dev/disk/by-uuid/ed070091-447d-410f-b897-bc0066d048e4";
+      device = "/dev/disk/by-uuid/5ec20f88-6d2a-4d99-b36e-d9f6544df727";
       fsType = "btrfs";
       options = [ "subvol=swap" "noatime" ];
     };

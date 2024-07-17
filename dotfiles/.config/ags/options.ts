@@ -81,11 +81,11 @@ export default makeOptions(OPTIONS, {
                 "expander",
             ]),
             center: option<Array<BarWidget>>([
-                "invisibleBox",
+                // "invisibleNotifications",
                 "notifications",
                 "date",
                 "media",
-                "invisibleBox",
+                "invisibleMedia",
             ]),
             end: option<Array<BarWidget>>([
                 "expander",
@@ -120,6 +120,7 @@ export default makeOptions(OPTIONS, {
 
         notifications: {
             action: option(() => App.toggleWindow("datemenu")),
+            noAction: option(() => { return "slay"; }),
         },
         date: {
             format: option("%A, %-e %B  •  %H:%M:%S"),

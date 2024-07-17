@@ -1,6 +1,5 @@
 { # mikorzen-specific host-agnostic home-manager configuration
   imports = [
-    # ./home/ags.nix
     ./home/hypr.nix
     ./home/installs.nix
     ./home/theme.nix

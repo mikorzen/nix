@@ -4,7 +4,7 @@
   console = {
     font = "${pkgs.terminus_font}/share/consolefonts/ter-v20b.psf.gz";
     colors = [
-      ## comment: [name for tuigreet/ratatui] [alternatives]*
+      ## comments are names for tuigreet, not actual colors
       # background
       "101216"  # black
       "1d2028"  # red (but umm, akshually lighter black)
@@ -13,7 +13,7 @@
       "81a1c1"  # blue
       "b48ead"  # magenta
       "8fbcbb"  # cyan
-      "8fbcbb"  # gray (used as the actual default color in tty - so should be white'ish)
+      "8fbcbb"  # gray (used as the actual default color for text in tty - so should be white'ish)
       # foreground
       "4c566a"  # darkgray (doesn't seem to work)
       "d94755"  # lightred

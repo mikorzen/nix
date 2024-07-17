@@ -10,7 +10,8 @@ import Taskbar from "./buttons/Taskbar"
 import Workspaces from "./buttons/Workspaces"
 import ScreenRecord from "./buttons/ScreenRecord"
 import Notifications from "./buttons/Notifications"
-import InvisibleBox from "./buttons/InvisibleBox"
+import InvisibleMedia from "./buttons/InvisibleMedia"
+import InvisibleNotifications from "./buttons/InvisibleNotifications"
 import options from "options"
 
 const { start, center, end } = options.bar.layout
@@ -34,7 +35,8 @@ const widget = {
     batteryBar: BatteryBar,
     powerMenu: PowerMenu,
 
-    invisibleBox: InvisibleBox,
+    invisibleMedia: InvisibleMedia,
+    invisibleNotifications: InvisibleNotifications,
     expander: () => Widget.Box({ expand: true }),
 }
 
