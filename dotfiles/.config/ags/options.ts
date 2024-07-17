@@ -81,7 +81,7 @@ export default makeOptions(OPTIONS, {
                 "expander",
             ]),
             center: option<Array<BarWidget>>([
-                // "invisibleNotifications",
+                "invisibleNotifications",
                 "notifications",
                 "date",
                 "media",
