@@ -163,7 +163,7 @@ export default makeOptions(OPTIONS, {
         apps: {
             iconSize: option(72),
             max: option(6),
-            favorites: option([["nautilus", "microsoft-edge", "code", "warp"]]),
+            favorites: option([["nautilus", "microsoft-edge", "visual studio code", "warp"]]),
         },
     },
 
