@@ -14,6 +14,11 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    settings.exec-once = [ "ags" "clipse -listen" ];
+    settings.exec-once = [
+      "ags"
+      "clipse -listen"
+      "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+      "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    ];
   };
 }
