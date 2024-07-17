@@ -12,6 +12,7 @@ export default () => {
     let player = getPlayer();
 
     const btn = PanelButton({
+        opacity: 0,
         child: Widget.Icon(icons.fallback.audio),
     });
 
