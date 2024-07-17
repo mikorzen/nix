@@ -1,6 +1,12 @@
 # Remember to change disk UUIDs under `./hosts/<host>/os/hardware/fileSystems.nix`
 
-`nix-channel --add https://nixos.org/channels/nixos-unstable nixos`
+
+Run as root and user:
+```
+nix-channel --add https://nixos.org/channels/nixos-unstable nixos
+
+nix-channel --update
+```
 
 Yellow gold: `#ffbb00`
 
