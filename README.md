@@ -1,4 +1,5 @@
-# Remember to change disk UUIDs under `./hosts/\<host\>/os/hardware/fileSystems.nix`
+# Remember to change disk UUIDs under  
+# `./hosts/<host>/os/hardware/fileSystems.nix`
 
 `nix-channel --add https://nixos.org/channels/nixos-unstable nixos`
 
