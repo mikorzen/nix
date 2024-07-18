@@ -1,5 +1,5 @@
-{ inputs, nixpkgs, system, home-manager, ... }: {
-  "mikorzen@Acerussy" = home-manager.lib.homeManagerConfiguration {
+{ inputs, nixpkgs, system, ... }: {
+  "mikorzen@Acerussy" = inputs.home-manager.lib.homeManagerConfiguration {
     pkgs = import nixpkgs { inherit system; };
     extraSpecialArgs = { inherit inputs; };
     modules = [
@@ -9,7 +9,7 @@
     ];
   };
 
-  "mikorzen@Computerussy" = home-manager.lib.homeManagerConfiguration {
+  "mikorzen@Computerussy" = inputs.home-manager.lib.homeManagerConfiguration {
     pkgs = import nixpkgs { inherit system; };
     extraSpecialArgs = { inherit inputs; };
     modules = [

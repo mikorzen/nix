@@ -2,7 +2,7 @@
   programs.hyprlock.settings.label = [{
     monitor = "";
 
-    text = "cmd[update:300000] echo \"<span font_weight='500'>$(date +'%A, %-e %B')</span>\"";
+    text = "cmd[update:1000] echo \"<span font_weight='500'>$(date +'%A, %-e %B')</span>\"";
     color = "rgba(255, 255, 255, 0.8)";
     font_size = 50;
     font_family = "Montserrat";

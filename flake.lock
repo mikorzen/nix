@@ -1,5 +1,26 @@
 {
   "nodes": {
+    "aagl": {
+      "inputs": {
+        "flake-compat": "flake-compat",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1720211568,
+        "narHash": "sha256-Uph6rcbiuOD6bGEySonDFozdO+mznTug08x27WG4BIg=",
+        "owner": "ezKEa",
+        "repo": "aagl-gtk-on-nix",
+        "rev": "ce7e02b20fe45425bbdbebc6fe0fdcc018c9efc6",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ezKEa",
+        "repo": "aagl-gtk-on-nix",
+        "type": "github"
+      }
+    },
     "ags": {
       "inputs": {
         "nixpkgs": [
@@ -7,16 +28,32 @@
         ]
       },
       "locked": {
-        "lastModified": 1721074762,
-        "narHash": "sha256-RhqFBMLh6G5vAo7Jz9mdsworI50E4FAAg7rPho4CNfY=",
+        "lastModified": 1721228801,
+        "narHash": "sha256-cuqMXJs1Zkh6yfwx1mG5/zyvxST8cm+XXQ1xXJMHQhY=",
         "owner": "Aylur",
         "repo": "ags",
-        "rev": "8194f0c9546a150525a2022c17aed51df1464b80",
+        "rev": "60c4fdcca841b9375bca68ce14b4dbac07f7c503",
         "type": "github"
       },
       "original": {
         "owner": "Aylur",
         "repo": "ags",
+        "type": "github"
+      }
+    },
+    "flake-compat": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1696426674,
+        "narHash": "sha256-kvjfFW7WAETZlt09AgDn1MrtKzP7t90Vf7vypd3OL1U=",
+        "owner": "edolstra",
+        "repo": "flake-compat",
+        "rev": "0f9255e01c2351cc7d116c072cb317785dd33b33",
+        "type": "github"
+      },
+      "original": {
+        "owner": "edolstra",
+        "repo": "flake-compat",
         "type": "github"
       }
     },
@@ -58,6 +95,7 @@
     },
     "root": {
       "inputs": {
+        "aagl": "aagl",
         "ags": "ags",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs"

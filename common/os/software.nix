@@ -2,6 +2,7 @@
   imports = [
     ./software/containers.nix
     ./software/fonts.nix
+    ./software/games.nix
     ./software/greetd.nix
     ./software/pipewire.nix
     ./software/resolved.nix
