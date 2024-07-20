@@ -12,6 +12,7 @@
     curtail        # compressor
     identity       # comparator
     frog           # OCR (image to text)
+    gimp           # editor
     # audio
     decibels       # player
     # text
