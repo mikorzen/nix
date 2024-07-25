@@ -17,7 +17,8 @@
     ## utilities
     bottles        # Windows containers
     parsec-bin     # remote desktop
-    protonvpn-gui  # VPN
-    networkmanagerapplet  # needed for ProtonVPN
+    ## no worky
+    # protonvpn-gui  # VPN
+    # networkmanagerapplet  # needed for ProtonVPN
   ];
 }
