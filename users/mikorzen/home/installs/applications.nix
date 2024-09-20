@@ -6,8 +6,7 @@
 
   home.packages = with pkgs; [
     ## essentials
-    (warp-terminal.override { waylandSupport = true; })  # terminal
-    microsoft-edge  # browser
+    warp-terminal
 
     ## entertainment
     cartridges  # game launcher
@@ -15,8 +14,10 @@
     discord     # (voice)chat
 
     ## utilities
-    bottles        # Windows containers
-    parsec-bin     # remote desktop
+    gnome-extension-manager
+    gnome-tweaks
+    bottles          # Windows containers
+    # parsec-bin     # remote desktop
     ## no worky
     # protonvpn-gui  # VPN
     # networkmanagerapplet  # needed for ProtonVPN

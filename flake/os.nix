@@ -1,5 +1,5 @@
-{ inputs, nixpkgs, system, ... }: {
-  "Acerussy" = nixpkgs.lib.nixosSystem {
+{ inputs, system, ... }: {
+  "Acerussy" = inputs.nixpkgs.lib.nixosSystem {
     specialArgs = { inherit inputs system; };
     modules = [
       ../common/os.nix          # user-agnostic     host-agnostic     NixOS configuration
@@ -8,7 +8,7 @@
     ];
   };
 
-  "Computerussy" = nixpkgs.lib.nixosSystem {
+  "Computerussy" = inputs.nixpkgs.lib.nixosSystem {
     specialArgs = { inherit inputs system; };
     modules = [
       ../common/os.nix              # user-agnostic     host-agnostic         NixOS configuration

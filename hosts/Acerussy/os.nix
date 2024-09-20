@@ -1,10 +1,22 @@
-{ # user-agnostic Acerussy-specific NixOS configuration
+{ lib, modulesPath, config, ... }: { # user-agnostic Acerussy-specific NixOS configuration
   imports = [
-    ./os/hardware.nix
-    ./os/software.nix
+    (modulesPath + "/installer/scan/not-detected.nix")
+    ./os/boot.nix
+    ./os/fileSystems.nix
   ];
 
   networking.hostName = "Acerussy";
 
+  # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
+  # (the default) this is the recommended approach. When using systemd-networkd it's
+  # still possible to use this option, but it's recommended to use it in conjunction
+  # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+  networking.useDHCP = lib.mkDefault true;
+  # networking.interfaces.wlp0s20f3.useDHCP = mkDefault true;
+
+  nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+
+  hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  
   system.stateVersion = "24.05"; # Do not change!
 }

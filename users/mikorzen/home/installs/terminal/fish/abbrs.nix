@@ -16,7 +16,6 @@
 
     cat = "bat";
     du = "dust";
-    rmt = "gio trash";
 
 
     # nix
@@ -25,11 +24,5 @@
     nos = "nh os switch";
     nhs = "nh home switch";
     nca = "nh clean all";
-
-
-    # system
-    net = "nmtui";
-    bt = "blueman-manager";
-    sus = "systemctl suspend";
   };
 }

@@ -1,9 +1,7 @@
 { # user-agnostic host-agnostic home-manager configuration
   imports = [
     ./home/dotfiles.nix
-    ./home/hypr.nix
     ./home/installs.nix
-    ./home/xdg.nix
   ];
 
   programs.home-manager.enable = true;

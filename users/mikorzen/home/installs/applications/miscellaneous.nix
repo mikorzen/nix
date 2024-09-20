@@ -6,7 +6,6 @@
     fragments       # torrent client
     impression      # pendrive flasher
     junction        # application picker
-    gradience       # theme gradient manager
     mission-center  # system monitor
     metadata-cleaner
   ];
