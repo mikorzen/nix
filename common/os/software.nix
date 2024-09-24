@@ -1,40 +1,27 @@
-{ pkgs, config, ... }: {
+{ pkgs, ... }: {
   imports = [
-    # ./software/containers.nix
     ./software/gnome.nix
     ./software/flatpak.nix
     ./software/fonts.nix
     ./software/pipewire.nix
     ./software/resolved.nix
+    ./software/virtualisation.nix
   ];
 
   environment.systemPackages = with pkgs; [
     blackbox-terminal  # terminal
-
-    # cursors for flatpak apps
-    # posy-cursors
-
-    # icons for flatpak apps
-    # adwaita-icon-theme
-    # morewaita-icon-theme
-
-    # for podman (containers)
-    # dive
-    # podman-tui
-    # podman-compose
+    gnome-firmware     # firmware updates
   ];
 
   programs = {
-    fish.enable = true;      # shell
-    git.enable = true;       # git (that's crazy)
-    steam.enable = true;     # gaming
-    nh = {
-      enable = true;
-      flake = "${config.users.users."mikorzen".home}/.nix/";
-    };
+    steam.enable = true;  # we gamin'
+    fish.enable = true;   # shell
+    git.enable = true;    # git (that's crazy)    
+    nh.enable = true;
   };
 
   services = {
+    fwupd.enable = true;     # firmware updates
     printing.enable = true;  # printing
     fstrim.enable = true;    # weekly SSD TRIM (I think)
   };

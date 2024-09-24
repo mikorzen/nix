@@ -1,9 +1,7 @@
-{ # user-agnostic host-agnostic home-manager configuration
+{  ## user-agnostic host-agnostic home-manager configuration
   imports = [
-    ./home/dotfiles.nix
-    ./home/installs.nix
+    ./home/software.nix
   ];
 
   programs.home-manager.enable = true;
-  home.stateVersion = "24.05";  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
 }

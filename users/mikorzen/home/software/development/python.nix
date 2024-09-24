@@ -1,5 +1,11 @@
-{
-  programs.ruff = {
+{ pkgs, ... }: {
+  home.packages = with pkgs; [
+    python3
+    python312Packages.pip
+    uv
+  ];
+
+  programs.ruff = {  # linter + formatter
     enable = true;
     settings = {
       fix = true;

@@ -1,16 +1,20 @@
 { pkgs, ... }: {
+  imports = [
+    ./software/vscode.nix
+  ];
+
   home.packages = with pkgs; [
-    dust          # `du` alternative
+    dust  # `du` alternative
   ];
 
   programs = {
-    eza = {             # `ls` alternative
+    eza = {                # `ls` alternative
       enable = true;
       enableBashIntegration = false;
       enableFishIntegration = false;
     };
-    bat.enable = true;  # `cat` alternative
-    fd = {              # `find` alternative
+    bat.enable = true;     # `cat` alternative
+    fd = {                 # `find` alternative
       enable = true;
       hidden = true;
     };

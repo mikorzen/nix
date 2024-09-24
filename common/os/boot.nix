@@ -10,13 +10,13 @@
       efi.canTouchEfiVariables = true;
     };
 
-    # initrd = {
-    #   enable = true;
-    #   systemd.enable = true;
-    # };
+    initrd = {
+      enable = true;
+      systemd.enable = true;
+    };
 
-    # plymouth.enable = true;      # boot splash screen with logo
-    # kernelParams = [ "quiet" ];
-    # consoleLogLevel = 3;
+    plymouth.enable = true;      # boot splash screen with logo
+    kernelParams = [ "quiet" ];
+    consoleLogLevel = 3;
   };
 }

@@ -2,18 +2,20 @@
   "Acerussy" = inputs.nixpkgs.lib.nixosSystem {
     specialArgs = { inherit inputs system; };
     modules = [
-      ../common/os.nix          # user-agnostic     host-agnostic     NixOS configuration
-      ../hosts/Acerussy/os.nix  # user-agnostic     Acerussy-specific NixOS configuration
-      ../users/mikorzen/os.nix  # mikorzen-specific host-agnostic     NixOS configuration
+      ../common/os.nix          # os configuration • common
+      ../hosts/Acerussy/os.nix  # os configuration • Acerussy
+
+      ../users/mikorzen/os.nix  # user definition  • mikorzen
     ];
   };
 
   "Computerussy" = inputs.nixpkgs.lib.nixosSystem {
     specialArgs = { inherit inputs system; };
     modules = [
-      ../common/os.nix              # user-agnostic     host-agnostic         NixOS configuration
-      ../hosts/Computerussy/os.nix  # user-agnostic     Computerussy-specific NixOS configuration
-      ../users/mikorzen/os.nix      # mikorzen-specific host-agnostic         NixOS configuration
+      ../common/os.nix              # os configuration • common
+      ../hosts/Computerussy/os.nix  # os configuration • Computerussy
+
+      ../users/mikorzen/os.nix      # user definition  • mikorzen
     ];
   };
 }

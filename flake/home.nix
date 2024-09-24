@@ -3,8 +3,8 @@
     pkgs = import inputs.nixpkgs { inherit system; };
     extraSpecialArgs = { inherit inputs; };
     modules = [
-      ../common/home.nix          # user-agnostic     home-manager configuration
-      ../users/mikorzen/home.nix  # mikorzen-specific home-manager configuration
+      ../common/home.nix          # home configuration • common
+      ../users/mikorzen/home.nix  # home configuration • mikorzen
     ];
   };
 
@@ -12,8 +12,8 @@
     pkgs = import inputs.nixpkgs { inherit system; };
     extraSpecialArgs = { inherit inputs; };
     modules = [
-      ../common/home.nix              # user-agnostic     home-manager configuration
-      ../users/mikorzen/home.nix      # mikorzen-specific home-manager configuration
+      ../common/home.nix          # home configuration • common
+      ../users/mikorzen/home.nix  # home configuration • mikorzen
     ];
   };
 }

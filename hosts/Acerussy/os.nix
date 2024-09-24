@@ -1,4 +1,4 @@
-{ lib, modulesPath, config, ... }: { # user-agnostic Acerussy-specific NixOS configuration
+{ lib, modulesPath, config, ... }: {  ## user-agnostic Acerussy-specific NixOS configuration
   imports = [
     (modulesPath + "/installer/scan/not-detected.nix")
     ./os/boot.nix
