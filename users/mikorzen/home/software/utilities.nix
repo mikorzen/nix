@@ -7,7 +7,7 @@
     eyedropper     # color picker
     collision      # hash checker
     fragments      # torrent client
-    
+
     ## essentials
     gnome-extension-manager
     mission-center  # system monitor
@@ -17,6 +17,5 @@
     ## naming and categorizing stuff is hard
     protonvpn-gui  # VPN
     parsec-bin     # remote desktop
-    bottles        # Wine containers
   ];
 }

@@ -1,7 +1,7 @@
 {  ## mikorzen-specific host-agnostic home-manager configuration
   imports = [
     ./home/dotfiles.nix
-    ./home/look.nix
+    ./home/looks.nix
     ./home/scripts.nix
     ./home/software.nix
   ];

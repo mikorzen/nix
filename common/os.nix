@@ -4,6 +4,7 @@
     ./os/envars.nix
     ./os/input.nix
     ./os/locale.nix
+    ./os/looks.nix
     ./os/networking.nix
     ./os/software.nix
   ];

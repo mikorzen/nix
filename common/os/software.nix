@@ -2,7 +2,6 @@
   imports = [
     ./software/gnome.nix
     ./software/flatpak.nix
-    ./software/fonts.nix
     ./software/pipewire.nix
     ./software/resolved.nix
     ./software/virtualisation.nix

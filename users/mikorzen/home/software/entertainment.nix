@@ -1,9 +1,10 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    vesktop  # (voice)chat (3rd-party discord client)
-
-    cartridges     # game launcher
     prismlauncher  # minecraft
+    cartridges     # game launcher
+    lutris         # game launcher (wine/proton stuff)
+
+    vesktop  # (voice)chat (3rd-party discord client)
 
     stremio  # movie/series streaming
   ];
