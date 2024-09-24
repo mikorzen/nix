@@ -1,4 +1,16 @@
 { pkgs, config, ... }: {
+  systemd.user.services.setup-extensions = {
+    Unit = {
+      Description = "Disables all GNOME extensions, then enables them one by one in a specific order";
+    };
+    Install = {
+      WantedBy = [ "org.gnome.Shell.target" ];
+    };
+    Service = {
+      ExecStart = "${pkgs.reorder-extensions}/bin/reorder-extensions";
+    };
+  };
+
   home.packages = with pkgs.gnomeExtensions; [
     advanced-alttab-window-switcher
     appindicator
@@ -26,16 +38,4 @@
     vitals
     weather-or-not
   ];
-
-  systemd.user.services.setup-extensions = {
-    Unit = {
-      Description = "Disables all GNOME extensions, then enables them one by one in a specific order";
-    };
-    Install = {
-      WantedBy = [ "org.gnome.Shell.target" ];
-    };
-    Service = {
-      ExecStart = "${pkgs.reorder-extensions}/bin/reorder-extensions";
-    };
-  };
 }
