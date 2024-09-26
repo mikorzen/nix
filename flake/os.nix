@@ -1,21 +1,12 @@
-{ inputs, system, ... }: {
-  "Acerussy" = inputs.nixpkgs.lib.nixosSystem {
+{ inputs, system, ... }: let
+  defaults = {
     specialArgs = { inherit inputs system; };
-    modules = [
-      ../common/os.nix          # os configuration • common
-      ../hosts/Acerussy/os.nix  # os configuration • Acerussy
-
-      ../users/mikorzen/os.nix  # user definition  • mikorzen
-    ];
+    modules = [ ../hosts/default.nix ];
   };
-
-  "Computerussy" = inputs.nixpkgs.lib.nixosSystem {
-    specialArgs = { inherit inputs system; };
-    modules = [
-      ../common/os.nix              # os configuration • common
-      ../hosts/Computerussy/os.nix  # os configuration • Computerussy
-
-      ../users/mikorzen/os.nix      # user definition  • mikorzen
-    ];
-  };
+  makeConfig = hostModule: inputs.nixpkgs.lib.nixosSystem (
+    defaults // { modules = defaults.modules ++ hostModule; }
+  );
+in {
+  "Acerussy" = makeConfig [ ../hosts/Acerussy.nix ];
+  "Computerussy" = makeConfig [ ../hosts/Computerussy.nix ];
 }

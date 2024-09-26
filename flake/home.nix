@@ -1,21 +1,15 @@
-{ inputs, system, ... }: {
+{ inputs, system, ... }: let
+  defaults = {
+    pkgs = import inputs.nixpkgs { inherit system; };
+    extraSpecialArgs = { inherit inputs; };
+  };
+  mikorzenConfig = inputs.home-manager.lib.homeManagerConfiguration {
+    inherit (defaults) pkgs extraSpecialArgs;
+    modules = [ ../users/mikorzen.nix ];
+  };
+in {
   inputs.home-manager.backupFileExtension = "backup";
 
-  "mikorzen@Acerussy" = inputs.home-manager.lib.homeManagerConfiguration {
-    pkgs = import inputs.nixpkgs { inherit system; };
-    extraSpecialArgs = { inherit inputs; };
-    modules = [
-      ../common/home.nix          # home configuration • common
-      ../users/mikorzen/home.nix  # home configuration • mikorzen
-    ];
-  };
-
-  "mikorzen@Computerussy" = inputs.home-manager.lib.homeManagerConfiguration {
-    pkgs = import inputs.nixpkgs { inherit system; };
-    extraSpecialArgs = { inherit inputs; };
-    modules = [
-      ../common/home.nix          # home configuration • common
-      ../users/mikorzen/home.nix  # home configuration • mikorzen
-    ];
-  };
+  "mikorzen@Acerussy" = mikorzenConfig;
+  "mikorzen@Computerussy" = mikorzenConfig;
 }
