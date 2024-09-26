@@ -38,10 +38,7 @@
     "org/gnome/mutter" = {
       center-new-windows = true;
       edge-tiling = true;
-      experimental-features = [
-        "scale-monitor-framebuffer"
-        "variable-refresh-rate"
-      ];
+      experimental-features = [ "scale-monitor-framebuffer" ];
     };
   };
 }

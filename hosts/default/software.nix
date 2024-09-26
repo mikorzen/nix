@@ -15,7 +15,11 @@
   ];
 
   programs = {
-    steam.enable = true;  # we gamin'
+    gamescope.enable = true;  # we gamin'
+    steam = {
+      enable = true;
+      gamescopeSession.enable = true;
+    };
     fish.enable = true;   # shell
     git.enable = true;    # version control (that's crazy)
     nh.enable = true;     # nix helper
