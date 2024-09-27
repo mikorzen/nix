@@ -3,10 +3,10 @@
     ## miscellaneous
     metadata-cleaner
     gnome-decoder  # QR code scanner
+    ventoy-full    # USB bootable ISO tool
     eyedropper     # color picker
     collision      # hash checker
     fragments      # torrent client
-    ventoy         # USB bootable ISO tool
 
     ## essentials
     gnome-extension-manager
