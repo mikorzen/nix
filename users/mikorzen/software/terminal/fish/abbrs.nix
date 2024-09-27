@@ -1,4 +1,4 @@
-{
+{ config, ... }: {
   programs.fish.shellAbbrs = {
     # utils
     fd = "fd --hidden";
@@ -22,7 +22,10 @@
     ncu = "nix-channel --update";
     nfu = "nix flake update";
     nos = "nh os switch";
-    nhs = "nh home switch";
+    nhs = "nh home switch -b backup";
     nca = "nh clean all";
+
+    # remove a backup of gtk.css that consistently blocks home-manager switch
+    rmgb = "rm ${config.home.homeDirectory}/.config/gtk-4.0/gtk.css.backup";
   };
 }
