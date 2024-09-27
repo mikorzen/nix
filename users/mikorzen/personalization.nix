@@ -38,10 +38,7 @@
     "org/gnome/mutter" = {
       center-new-windows = true;
       edge-tiling = true;
-      experimental-features = [
-        "scale-monitor-framebuffer"
-        "xwayland-native-scaling"
-      ];
+      experimental-features = [ "scale-monitor-framebuffer" ];
     };
   };
 }
