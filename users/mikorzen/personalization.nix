@@ -28,7 +28,7 @@
     };
     "org/gnome/settings-daemon/plugins/power" = {
       power-button-action = "suspend";
-      sleep-inactive-ac-timeout = lib.gvariant.mkInt32 1200;
+      sleep-inactive-ac-timeout = lib.gvariant.mkInt32 900;
       sleep-inactive-battery-timeout = lib.gvariant.mkInt32 300;
     };
     "org/gnome/settings-daemon/plugins/media-keys" = {
@@ -38,7 +38,10 @@
     "org/gnome/mutter" = {
       center-new-windows = true;
       edge-tiling = true;
-      experimental-features = [ "scale-monitor-framebuffer" ];
+      experimental-features = [
+        "scale-monitor-framebuffer"
+        "xwayland-native-scaling"
+      ];
     };
   };
 }
