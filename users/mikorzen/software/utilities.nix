@@ -3,7 +3,6 @@
     ## miscellaneous
     metadata-cleaner
     gnome-decoder  # QR code scanner
-    impression     # pendrive flasher
     eyedropper     # color picker
     collision      # hash checker
     fragments      # torrent client
