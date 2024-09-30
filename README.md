@@ -7,6 +7,11 @@ nix-channel --add https://nixos.org/channels/nixos-unstable nixos
 nix-channel --update
 ```
 
+For Computerussy:
+```
+modprobe 88x2bu
+```
+
 Yellow gold: `#ffbb00`
 
 ## To-do
