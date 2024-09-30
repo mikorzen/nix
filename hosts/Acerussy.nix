@@ -3,6 +3,7 @@
     (modulesPath + "/installer/scan/not-detected.nix")
     ./Acerussy/boot.nix
     ./Acerussy/fileSystems.nix
+    ./Acerussy/scaling.nix
   ];
 
   networking.hostName = "Acerussy";

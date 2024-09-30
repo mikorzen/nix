@@ -3,12 +3,9 @@
   #! `./users/<username>/personalization.nix`
   imports = [
     ./personalization/fonts.nix
-
     ./personalization/cursor-theme.nix
     ./personalization/gtk-theme.nix
     ./personalization/icon-theme.nix
-
-    ./personalization/scaling.nix
   ];
 
   programs.dconf.profiles.gdm.databases = [{

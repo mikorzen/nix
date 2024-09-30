@@ -6,13 +6,9 @@
       systemd-boot = {
         enable = true;
         editor = false;
+        consoleMode = "max";
       };
       efi.canTouchEfiVariables = true;
-    };
-
-    initrd = {
-      enable = true;
-      systemd.enable = true;
     };
 
     plymouth.enable = true;      # boot splash screen with logo
