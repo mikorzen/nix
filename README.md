@@ -13,4 +13,3 @@ Yellow gold: `#ffbb00`
 - [ ] secrets management?
 - [ ] full disk encryption (`luks`)?
 - [ ] secure boot (`lanzaboote`)?
-- [ ] ~~die~~
