@@ -34,7 +34,7 @@
     };
     "org/gnome/settings-daemon/plugins/power" = {
       power-button-action = "suspend";
-      sleep-inactive-ac-timeout = lib.gvariant.mkInt32 900;
+      sleep-inactive-ac-timeout = lib.gvariant.mkInt32 2700;
       sleep-inactive-battery-timeout = lib.gvariant.mkInt32 300;
     };
     "org/gnome/desktop/wm/preferences" = {
