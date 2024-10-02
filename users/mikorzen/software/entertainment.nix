@@ -7,7 +7,7 @@
 
     vesktop  # (voice)chat (3rd-party discord client)
 
-    microsoft-edge  # for Netflix and GeForce NOW
+    microsoft-edge  # for Netflix, Max and GeForce NOW
     stremio         # movie/series streaming
   ];
 }

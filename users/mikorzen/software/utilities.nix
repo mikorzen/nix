@@ -16,5 +16,6 @@
     ## naming and categorizing stuff is hard
     protonvpn-gui  # VPN
     parsec-bin     # remote desktop
+    zoom-us        # video conferencing
   ];
 }
