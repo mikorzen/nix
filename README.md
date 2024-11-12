@@ -1,4 +1,4 @@
-# Remember to change disk UUIDs under `./hosts/<host>/os/hardware/fileSystems.nix`
+# Remember to change disk UUIDs under `./hosts/<host>/fileSystems.nix`
 
 
 Run as root and user:
