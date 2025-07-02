@@ -68,14 +68,23 @@ cd <cloned repo>
 home-manager switch --flake .#<user-name>@<machine-name>
 ```
 
-## Install flatpaks
+install flatpaks:
 
-* `flatpak install flathub app.zen_browser.zen`
-* `flatpak install flathub com.github.tchx84.Flatseal`
-* `flatpak install flathub io.github.flattool.Warehouse`
-* `flatpak install flathub io.github.giantpinkrobots.flatsweep`
+```bash
+flatpak install flathub app.zen_browser.zen
+```
 
-## Setup continued
+```bash
+flatpak install flathub com.github.tchx84.Flatseal
+```
+
+```bash
+flatpak install flathub io.github.flattool.Warehouse
+```
+
+```bash
+flatpak install flathub io.github.giantpinkrobots.flatsweep
+```
 
 set Zen as the default browser:
 
