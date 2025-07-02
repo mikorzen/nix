@@ -1,20 +1,6 @@
-# Remember to change disk UUIDs under `./hosts/<host>/fileSystems.nix`
+set zen as default browser
 
+xdg-settings set default-web-browser app.zen_browser.zen.desktop
 
-Run as root and user:
-```
-nix-channel --add https://nixos.org/channels/nixos-unstable nixos
-nix-channel --update
-```
-
-For Computerussy:
-```
-modprobe 88x2bu
-```
-
-Yellow gold: `#ffbb00`
-
-## To-do
-- [ ] secrets management?
-- [ ] full disk encryption (`luks`)?
-- [ ] secure boot (`lanzaboote`)?
+where the .desktop file is at
+/var/lib/flatpak/exports/share/applications

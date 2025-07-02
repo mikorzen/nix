@@ -19,7 +19,7 @@
               mountOptions = [ "umask=0077" ];
             };
           };
-          root = {
+          nixos = {
             priority = 2;
             size = "100%";
             content = {

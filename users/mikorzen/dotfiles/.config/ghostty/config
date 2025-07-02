@@ -1,0 +1,35 @@
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+title = "ghostty"
+
+background-opacity = 0.9
+
+window-padding-x = 8
+window-padding-y = 4
+window-padding-balance = true
+
+window-subtitle = working-directory
+
+window-height = 35
+window-width = 125
+
+mouse-scroll-multiplier = 1.25
+
+font-family = "JetBrainsMono Nerd Font Propo"
+
+# keybinds
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
+keybind = shift+page_up=jump_to_prompt:-1
+keybind = shift+page_down=jump_to_prompt:1
+
+keybind = page_up=scroll_page_up
+keybind = page_down=scroll_page_down
+
+keybind = home=scroll_to_top
+keybind = end=scroll_to_bottom
