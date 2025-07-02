@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   # workaround to fix not being able to get into gnome
-  # for a first couple of seconds after a boot
+  # for the first couple of seconds after a boot
   # https://discourse.nixos.org/t/gnome-display-manager-fails-to-login-until-wi-fi-connection-is-established/50513/15
   # https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services = {
@@ -9,7 +9,7 @@
   };
 
   # workaround for a bunch of issues related to suspend, such as
-  # not being able to enter sleep, system freezing, 
+  # not being able to enter sleep, system freezing,
   # screen blanking, not being able to wake up from sleep, etc.
   # https://discourse.nixos.org/t/suspend-problem/54033/28
   boot.kernelParams = [ "nvidia.NVreg_TemporaryFilePath=/var/tmp" ];
@@ -34,7 +34,7 @@
         ExecStart = ''${pkgs.procps}/bin/pkill -f -STOP ${pkgs.gnome-shell}/bin/gnome-shell'';
       };
     };
-    
+
     "gnome-resume" = {
       description = "resume gnome shell";
       after = [
