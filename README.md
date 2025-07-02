@@ -92,6 +92,16 @@ set Zen as the default browser:
 xdg-settings set default-web-browser /var/lib/flatpak/exports/share/applications/app.zen_browser.zen.desktop
 ```
 
+download ssh keys from Proton Pass, put them in `$HOME/.ssh`, and make sure they have correct permissions:
+
+```bash
+chmod 600 <private-key>
+```
+
+```bash
+chmod 644 <public-key>.pub
+```
+
 ## List of workarounds in this config
 
 ### temporary fixes which are supposed to be removed as underlying issues are fixed
