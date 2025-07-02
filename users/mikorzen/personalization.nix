@@ -1,4 +1,17 @@
-{ lib, config, ... }: {
+{ config, lib, ... }: {
+  #! remember to reflect desirable changes in respective
+  #! `./hosts/default/personalization.nix`
+  imports = [
+    ./personalization/cursor-theme.nix
+    ./personalization/icon-theme.nix
+  ];
+
+  gtk = {
+    enable = true;
+    cursorTheme = config.personalization.cursorTheme;
+    iconTheme = config.personalization.iconTheme;
+  };
+
   dconf.settings = {
     "org/gnome/system/locale" = {
       region = "pl_PL.UTF-8";

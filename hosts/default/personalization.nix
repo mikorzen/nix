@@ -1,8 +1,10 @@
-{ lib, ... }: {
+{ lib, config, ... }: {
   #! remember to reflect desirable changes in respective
   #! `./users/<username>/personalization.nix`
   imports = [
     ./personalization/fonts.nix
+    ./personalization/cursor-theme.nix
+    ./personalization/icon-theme.nix
   ];
 
   programs.dconf.profiles.gdm.databases = [{
@@ -10,6 +12,9 @@
       "org/gnome/desktop/interface" = {
         clock-show-seconds = true;
         clock-show-weekday = true;
+        cursor-theme = config.personalization.cursorTheme.name;
+        cursor-size = config.personalization.cursorTheme.size;
+        icon-theme = config.personalization.iconTheme.name;
       };
       "org/gnome/desktop/peripherals/mouse" = {
         accel-profile = "flat";
