@@ -18,7 +18,7 @@
     panel-corners
     pip-on-top
     quick-settings-audio-panel
-    # quick-settings-tweaker  # broken on GNOME 48
+    # quick-settings-tweaker  # broken on GNOME 48 https://github.com/qwreey/quick-settings-tweaks/issues/197#issuecomment-2913560783
     reboottouefi
     transparent-window-moving
     user-avatar-in-quick-settings
