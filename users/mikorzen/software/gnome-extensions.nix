@@ -12,19 +12,19 @@
     done
   '';
 in {
-  systemd.user.services.setup-extensions = {
-    Unit = {
-      Description = "Disable and re-enable GNOME extensions in a specific order";
-    };
-    Install = {
-      WantedBy = [ "org.gnome.Shell.target" ];
-    };
-    Service = {
-      Type = "oneshot";
-      RemainAfterExit = true;
-      ExecStart = "${setup-extensions}";
-    };
-  };
+  # systemd.user.services.setup-extensions = {
+  #   Unit = {
+  #     Description = "Disable and re-enable GNOME extensions in a specific order";
+  #   };
+  #   Install = {
+  #     WantedBy = [ "org.gnome.Shell.target" ];
+  #   };
+  #   Service = {
+  #     Type = "oneshot";
+  #     RemainAfterExit = true;
+  #     ExecStart = "${setup-extensions}";
+  #   };
+  # };
 
   home.packages = with pkgs.gnomeExtensions; [
     advanced-alttab-window-switcher
