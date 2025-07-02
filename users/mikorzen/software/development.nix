@@ -1,6 +1,5 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
-    commit    # commit message editor
     wildcard  # regex tester
   ];
 
