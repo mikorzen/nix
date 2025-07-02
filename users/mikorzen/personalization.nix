@@ -47,6 +47,14 @@
     "org/gnome/settings-daemon/plugins/media-keys" = {
       home = [ "<Super>e" ];
       www = [ "<Super>b" ];
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+      ];
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
+      name = "Launch terminal";
+      command = "ghostty";
+      binding = "<Super>t";
     };
     "org/gnome/mutter" = {
       center-new-windows = true;
