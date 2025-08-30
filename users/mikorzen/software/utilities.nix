@@ -11,7 +11,7 @@
     eyedropper     # color picker
     fragments      # torrent client
     gnome-decoder  # QR code scanner
-    metadata-cleaner
+    # metadata-cleaner  # python tests failing
 
     ## miscellaneous (3rd party)
     protonvpn-gui  # VPN
