@@ -5,12 +5,12 @@ version = 3
   yellow_gold = '#FFB900'
   red = '#E06C75'
 
-[transient_prompt]
-  template = '# '
-  foreground_templates = [
-    '{{ if eq .Code 0 }}p:yellow_gold{{ end }}',
-    '{{ if gt .Code 0 }}p:red{{ end }}'
-  ]
+# [transient_prompt]
+#   template = '# '
+#   foreground_templates = [
+#     '{{ if eq .Code 0 }}p:yellow_gold{{ end }}',
+#     '{{ if gt .Code 0 }}p:red{{ end }}'
+#   ]
 
 [[blocks]]
   type = 'prompt'
