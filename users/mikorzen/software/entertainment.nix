@@ -14,6 +14,6 @@
 
     ## movies & shows
     microsoft-edge  # for Netflix, Max and GeForce NOW
-    stremio         # movie/series streaming
+    # stremio         # movie/series streaming | qtwebengine marked as insecure
   ];
 }
