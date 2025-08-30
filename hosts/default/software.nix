@@ -1,13 +1,13 @@
 { pkgs, ... }: let
   # temporary workaround due to a regression
   # that made ghostty unusable on 6.15.4 kernel
-  ghostty = pkgs.ghostty.overrideAttrs (_: {
-    preBuild = ''
-      shopt -s globstar
-      sed -i 's/^const xev = @import("xev");$/const xev = @import("xev").Epoll;/' **/*.zig
-      shopt -u globstar
-    '';
-  });
+  # ghostty = pkgs.ghostty.overrideAttrs (_: {
+  #   preBuild = ''
+  #     shopt -s globstar
+  #     sed -i 's/^const xev = @import("xev");$/const xev = @import("xev").Epoll;/' **/*.zig
+  #     shopt -u globstar
+  #   '';
+  # });
 in {
   imports = [
     ./software/audio.nix
